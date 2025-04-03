@@ -7,43 +7,65 @@
     </head>
   <body>
         <header>
-            <img src="ひろたっちゃんアイコン(ひろ).jpg" art="ひろたっちゃんのひろのほうのアイコン">
+            <img src="ひろたっちゃんアイコン(ひろ).jpg" alt="ひろたっちゃんのひろのほうのアイコン">
             <h1>ひろたっちゃん</h1>
             <p>新米プログラマーです</p>
             <p>Progateにて、HTML、CSS、JavaScriptを勉強しました</p>
             <p>連絡先はこちら</p>
-            <h2>mail-address:hirotattiyan@ymail.ne.jp TEL:090-8390-2060</h2>
+            <h2>mail-address:hirotatupapa@hotmail.com TEL:090-8390-2060</h2>
         </header>
         <main>
             <h2>☆MY Portfolio☆</h2>
-            <div class="contents">
-                <div class="to-do">
-                    <a href="To-Doリストアプリ.html">
-                     <img src="To-Doリスト.png" art="To-Doリストアプリの写真">
+
+                <div class="contents fade-in">
+                    <a href="To-Doリストアプリ/To-Doリストアプリ.html">
+                     <img src="To-Doリスト.png" alt="To-Doリストアプリの写真">
+                     <div class="overlay">To-Doリストアプリ</div>
                     </a>
+                </div>
+                <div>
                     <p>
-                        <a href="To-Doリストアプリ.html">To-Doリストアプリ</a>
+                        <a href="To-Doリストアプリ/To-Doリストアプリ.html">To-Doリストアプリ</a>
                     </p>
                     <p>シンプルなTo-Doリストです。文字の入力、保存、削除ができます。</p>
                     <p>ローカルストレージにデータが保存されるため、アプリを消しても保存した文字が残せます。</p>
                 </div>
-                <div class="typing">
-                    <a href="タイピングゲーム.html">
-                        <img src="タイピングゲーム.png" art="タイピングゲームの画像">
+                <div class="contents fade-in">
+                    <a href="タイピングゲーム/タイピングゲーム.html">
+                        <img src="タイピングゲーム.png" alt="タイピングゲームの画像">
+                        <div class="overlay">タイピングゲーム</div>
                     </a>
+                </div>
+                <div>   
                     <p>
-                        <a href="タイピングゲーム.html">タイピングゲーム</a>
+                        <a href="タイピングゲーム/タイピングゲーム.html">タイピングゲーム</a>
                     </p>    
                     <P>シンプルなタイピングゲームです</P>
                     <p>正解時に３秒のボーナスタイムが付きます</p>
                     <p>英単語のタイピング練習にどうぞ！</p>
                     
                 </div>
-            
-            </div>
+
+            <h1>お問い合わせ</h1>
+            <form action="http://formsubmit.co/hirotattiyan@ymail.jp" method="POST">
+                <p>
+                <label for="name">お名前：</label>
+                <input type="text" id="name" name="name">
+                </p>
+                <p>
+                <label for="email">メールアドレス：</label>
+                <input type="email" id="email" name="email">
+                </p>
+                <p>
+                <label for="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" ></textarea>
+                </p>
+                <button type="submit">送信</button>
+            </form>
          </main>
         <footer>
             hirotattyan.com
         </footer>
+        <script src="Portfolio.js"></script>
     </body>
 </html>
