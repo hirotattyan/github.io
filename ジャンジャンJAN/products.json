@@ -1,0 +1,62 @@
+[
+  {
+    "jan": "4901234567890",
+    "name": "テスト用1",
+    "image": "images/test01.png",
+    "category": "酒"
+  },
+  {
+    "jan": "4512345678901",
+    "name": "テスト用2",
+    "image": "images/test01.png",
+    "category": "食品"
+  },
+  {
+    "jan": "4976543210987",
+    "name": "テスト用3",
+    "image": "images/test01.png",
+    "category": "飲料"
+  },
+  {
+    "jan": "4532109876543",
+    "name": "テスト用4",
+    "image": "images/test01.png",
+    "category": "生活雑貨"
+  },
+  {
+    "jan": "4909876543216",
+    "name": "テスト用5",
+    "image": "images/test01.png",
+    "category": "家電"
+  },
+  {
+    "jan": "4587654321098",
+    "name": "テスト用6",
+    "image": "images/test01.png",
+    "category": "その他"
+  },
+  {
+    "jan": "4956789012347",
+    "name": "テスト用7",
+    "image": "images/test01.png",
+    "category": "酒"
+  },
+  {
+    "jan": "4999998888777",
+    "name": "テスト用8",
+    "image": "images/test01.png",
+    "category": "酒"
+  },
+  {
+    "jan": "4524681357913",
+    "name": "テスト用9",
+    "image": "images/test01.png",
+    "category": "飲料"
+  },
+  {
+    "jan": "4902468135790",
+    "name": "テスト用10",
+    "image": "images/test01.png",
+    "category": "食品"
+  }
+]

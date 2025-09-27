@@ -1,0 +1,27 @@
+<h2>商品データ追加フォーム</h2>
+
+<form id="add-product-form">
+  <p>JANコード: <input type="text" id="jan" required></p>
+  <p>商品名: <input type="text" id="name" required></p>
+  <p>画像ファイル名: <input type="text" id="image" placeholder="例: ga538pa.jpg" required></p>
+  <p>カテゴリー:
+    <select id="category" required>
+        <option value="">選択してください</option>
+        <option value="酒">酒</option>
+        <option value="食品">食品</option>
+        <option value="飲料">飲料</option>
+        <option value="生活雑貨">生活雑貨</option>
+        <option value="家電">家電</option>
+        <option value="その他">その他</option>
+      </select>
+  </p>
+  <button type="submit">データ追加</button>
+</form>
+
+ <h2>JSON出力</h2>
+  <pre id="json-output" style="background:#f0f0f0;padding:10px;"></pre>
+  <button id="download-json">JSONをダウンロード</button>
+
+ <script src="janjanjan.js"></script>
+</body>
+</html>
