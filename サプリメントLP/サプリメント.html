@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>架空サプリメントLP | 商品名</title>
+  <meta name="description" content="架空のサプリメントLPのサンプル構造です。" />
+
+  <!-- Reset / CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="SUPPLEMENT.css" />
+</head>
+
+<body>
+  <!-- 画面上部に固定するなら（任意） -->
+  <div class="sticky-cta" aria-label="固定CTA（任意）">
+    <a class="btn btn--primary" href="#offer">初回特別価格で申し込む</a>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="hero__badge">初回限定 ◯◯%OFF / 送料無料</p>
+        <h1 class="hero__title">毎朝のだるさ、年齢のせいにしていませんか？</h1>
+        <p class="hero__lead">1日1粒で、軽やかな毎日へ。続けやすさにこだわった○○サプリ。</p>
+
+        <ul class="hero__points">
+          <li>✓ 主要成分◯◯を高配合</li>
+          <li>✓ 国内GMP相当工場で製造</li>
+          <li>✓ 無香料・無着色</li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#offer">初回特別価格で申し込む</a>
+          <a class="btn btn--ghost" href="#features">詳しく見る</a>
+        </div>
+
+        <p class="hero__note">※本LPは架空のサンプルです。※効果には個人差があります。</p>
+      </div>
+
+      <figure class="hero__visual">
+        <img src="img/mainvisual.png" alt="商品イメージ" loading="eager">
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <!-- 共感（悩み） -->
+    <section class="section section--pain" id="pain">
+      <div class="container">
+        <h2 class="section__title">こんなお悩みありませんか？</h2>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3 class="card__title">朝から重たい</h3>
+            <p class="card__text">起きてもスッキリせず、1日がしんどい。</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">夕方に落ちる</h3>
+            <p class="card__text">集中が続かず、仕事や家事がつらい。</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">検査値が気になる</h3>
+            <p class="card__text">食事だけでは不安…でも続けられるものがない。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 解決（原因→解決策） -->
+    <section class="section section--solution" id="solution">
+      <div class="container">
+        <h2 class="section__title">原因は「◯◯不足」かもしれません</h2>
+        <div class="split">
+          <div class="split__text">
+            <p>
+              現代の生活では、食事だけで◯◯を十分に摂るのが難しくなりがち。
+              そこで<span class="em">“必要な成分を、必要な量で”</span>をコンセプトに開発されたのが
+              <strong>商品名</strong>です。
+            </p>
+            <ul class="list">
+              <li>食事で補いにくい成分を厳選</li>
+              <li>毎日続けられる飲みやすさ</li>
+              <li>余計なものを入れない設計</li>
+            </ul>
+          </div>
+          <figure class="split__media">
+            <img src="img/solution.jpg" alt="原因と解決のイメージ" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 特徴（ベネフィット） -->
+    <section class="section section--features" id="features">
+      <div class="container">
+        <h2 class="section__title">選ばれる3つの理由</h2>
+        <div class="grid grid--3">
+          <article class="feature">
+            <h3 class="feature__title">高配合</h3>
+            <p class="feature__text">主要成分◯◯を1日あたり◯◯mg配合</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">国内製造</h3>
+            <p class="feature__text">品質管理の行き届いた国内工場で製造</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">続けやすい</h3>
+            <p class="feature__text">小粒設計＆におい控えめで毎日続けやすい。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成分・処方（中身） -->
+    <section class="section section--ingredients" id="ingredients">
+      <div class="container">
+        <h2 class="section__title">成分とこだわり</h2>
+        <div class="split">
+          <figure class="split__media">
+            <img src="img/ingredients.jpg" alt="成分イメージ" loading="lazy">
+          </figure>
+          <div class="split__text">
+            <dl class="spec">
+              <div class="spec__row">
+                <dt>◯◯エキス</dt>
+                <dd>◯◯mg</dd>
+              </div>
+              <div class="spec__row">
+                <dt>ビタミンB群</dt>
+                <dd>◯◯mg</dd>
+              </div>
+              <div class="spec__row">
+                <dt>添加物</dt>
+                <dd>無香料・無着色</dd>
+              </div>
+            </dl>
+            <p class="note">※本商品は医薬品ではありません。栄養補助を目的とした架空のサンプルです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 比較（差別化） -->
+    <section class="section section--compare" id="compare">
+      <div class="container">
+        <h2 class="section__title">他社サプリとの違い</h2>
+        <div class="table-wrap" role="region" aria-label="比較表">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col">比較項目</th>
+                <th scope="col">商品名</th>
+                <th scope="col">一般的なサプリ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">成分量</th>
+                <td>◎（高配合）</td>
+                <td>△（少なめ）</td>
+              </tr>
+              <tr>
+                <th scope="row">製造</th>
+                <td>国内</td>
+                <td>海外/不明</td>
+              </tr>
+              <tr>
+                <th scope="row">添加物</th>
+                <td>少なめ</td>
+                <td>多め</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="section section--reviews" id="reviews">
+      <div class="container">
+        <h2 class="section__title">お客様の声</h2>
+        <p class="section__lead">※個人の感想です。効果を保証するものではありません。</p>
+
+        <div class="grid grid--3">
+          <article class="review">
+            <p class="review__text">「朝の重さが減って、動き出しが楽に感じます。」</p>
+            <p class="review__meta">40代 / 男性 / 会社員</p>
+          </article>
+          <article class="review">
+            <p class="review__text">「続けやすい味（におい）で、毎日飲めています。」</p>
+            <p class="review__meta">30代 / 女性</p>
+          </article>
+          <article class="review">
+            <p class="review__text">「生活習慣を見直すきっかけになりました。」</p>
+            <p class="review__meta">50代 / 主婦</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 安心・信頼 -->
+    <section class="section section--trust" id="trust">
+      <div class="container">
+        <h2 class="section__title">安心のための取り組み</h2>
+        <ul class="icon-list">
+          <li>国内工場で製造</li>
+          <li>ロットごとに検査</li>
+          <li>定期縛りなし</li>
+          <li>30日返金保証</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- オファー（価格・購入） -->
+    <section class="section section--offer" id="offer">
+      <div class="container">
+        <h2 class="section__title">初回限定キャンペーン</h2>
+
+        <div class="offer">
+          <div class="offer__price">
+            <p class="offer__normal">通常価格 <span>4,980円（税込）</span></p>
+            <p class="offer__special">初回特別 <strong>1,980円（税込）</strong></p>
+            <ul class="offer__perks">
+              <li>送料無料</li>
+              <li>30日返金保証</li>
+              <li>いつでも解約OK</li>
+            </ul>
+          </div>
+
+          <form class="offer__form" action="#" method="post">
+            <h3 class="offer__formTitle">お申し込み</h3>
+
+            <label class="field">
+              <span class="field__label">お名前</span>
+              <input class="field__input" type="text" name="name" autocomplete="name" required>
+            </label>
+
+            <label class="field">
+              <span class="field__label">メールアドレス</span>
+              <input class="field__input" type="email" name="email" autocomplete="email" required>
+            </label>
+
+            <label class="field">
+              <span class="field__label">お届け先住所</span>
+              <input class="field__input" type="text" name="address" autocomplete="street-address" required>
+            </label>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              初回特別価格で申し込む
+            </button>
+
+            <p class="form-note">※架空フォームです。送信はされません。</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--faq" id="faq">
+      <div class="container">
+        <h2 class="section__title">よくある質問</h2>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__q">いつ飲めばいいですか？</summary>
+            <div class="faq__a">
+              <p>目安として1日1粒。生活リズムに合わせてお飲みください。</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">副作用はありますか？</summary>
+            <div class="faq__a">
+              <p>体質により合わない場合があります。異常を感じたらご利用を中止してください。</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">どれくらいで実感しますか？</summary>
+            <div class="faq__a">
+              <p>個人差がありますが、まずは◯週間を目安に続ける方が多いです。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="section section--final">
+      <div class="container final-cta">
+        <h2 class="final-cta__title">今日から、軽やかな毎日へ。</h2>
+        <p class="final-cta__text">初回限定特別価格は予告なく終了する場合があります。</p>
+        <a class="btn btn--primary btn--large" href="#offer">初回特別価格で申し込む</a>
+        <p class="note">※本LPは架空のサンプルです。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <nav class="footer__nav" aria-label="フッターナビ">
+        <a href="#top">トップ</a>
+        <a href="#faq">FAQ</a>
+        <a href="#offer">お申し込み</a>
+      </nav>
+
+      <section class="legal">
+        <h2 class="sr-only">表記</h2>
+        <ul class="legal__links">
+          <li><a href="#">特定商取引法に基づく表記</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">会社概要</a></li>
+        </ul>
+      </section>
+
+      <small class="footer__copy">© 架空サプリメントLP Sample</small>
+    </div>
+  </footer>
+</body>
+</html>

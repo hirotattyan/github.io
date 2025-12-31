@@ -1,0 +1,366 @@
+/* =========================
+   基本設定
+========================= */
+:root {
+  --main: #2f80ed;
+  --accent: #f2994a;
+  --dark: #222;
+  --gray: #666;
+  --light: #f7f9fc;
+  --border: #e5e7eb;
+  --radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", "Yu Gothic", sans-serif;
+  color: var(--dark);
+  line-height: 1.7;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   レイアウト共通
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section--light {
+  background: var(--light);
+}
+
+.section__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section__lead {
+  text-align: center;
+  color: var(--gray);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   ボタン
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background: var(--main);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn--ghost {
+  border-color: var(--main);
+  color: var(--main);
+}
+
+.btn--ghost:hover {
+  background: var(--main);
+  color: #fff;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--large {
+  font-size: 1.1rem;
+  padding: 18px 36px;
+}
+
+/* =========================
+   HERO（ファーストビュー）
+========================= */
+.hero {
+  background: linear-gradient(180deg, #f2f6ff 0%, #ffffff 100%);
+  padding: 80px 0 40px;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero__badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero__lead {
+  font-size: 1.05rem;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+.hero__points {
+  margin-bottom: 32px;
+}
+
+.hero__points li {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__note {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.hero__visual img {
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   GRID / CARD
+========================= */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card,
+.feature,
+.review {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card__title,
+.feature__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   SPLIT（左右分割）
+========================= */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.split__media img {
+  border-radius: var(--radius);
+}
+
+/* =========================
+   成分表
+========================= */
+.spec__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* =========================
+   比較表
+========================= */
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare th,
+.compare td {
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+}
+
+.compare thead {
+  background: var(--light);
+}
+
+/* =========================
+   OFFER（価格）
+========================= */
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.offer__normal {
+  color: var(--gray);
+  text-decoration: line-through;
+}
+
+.offer__special {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 16px 0;
+}
+
+.offer__perks li {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* =========================
+   フォーム
+========================= */
+.field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field__label {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.field__input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq__item {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.faq__q {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+.section--final {
+  background: var(--main);
+  color: #fff;
+  text-align: center;
+}
+
+.final-cta__title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 40px 0;
+}
+
+.footer__nav a {
+  margin-right: 16px;
+  font-size: 0.9rem;
+}
+
+.footer__copy {
+  display: block;
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* =========================
+   固定CTA（任意）
+========================= */
+.sticky-cta {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 100;
+}
+
+/* =========================
+   レスポンシブ
+========================= */
+@media (max-width: 768px) {
+  .hero__inner,
+  .split,
+  .offer {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}
