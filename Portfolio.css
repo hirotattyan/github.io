@@ -160,4 +160,174 @@ header h2{
  #contact-btn:hover {
     background-color: #0056b3;
  }
+
+/* レスポンシブ対応 */
+
+/* タブレット・スマートフォン（900px以下） */
+@media (max-width: 900px) {
+    header img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    header h1 {
+        margin: 10px 0 5px 0;
+        font-size: 1.5em;
+    }
+
+    header h2 {
+        font-size: 0.9em;
+        padding: 0 10px 10px 10px;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skill {
+        width: 90%;
+        max-width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    main h2 {
+        font-size: 1.3em;
+        padding: 15px 10px;
+    }
+
+    .contents {
+        max-width: 100%;
+        margin: 0 auto 10px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .contents .overlay {
+        font-size: 1.2em;
+    }
+
+    main > div:not(.top):not(.contents) {
+        padding: 0 10px;
+        margin: 0 auto 20px;
+    }
+
+    form {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    form p {
+        margin: 10px 0;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    form button {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #contact-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* スマートフォン専用（600px以下） */
+@media (max-width: 600px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+        margin: 5px 0;
+    }
+
+    header h2 {
+        font-size: 0.75em;
+        padding: 0 5px 5px 5px;
+        margin: 0;
+    }
+
+    main h2 {
+        font-size: 1.1em;
+    }
+
+    .profile h2,
+    .skill h2 {
+        font-size: 1.1em;
+    }
+
+    .profile p,
+    .skill p {
+        font-size: 0.9em;
+        margin: 8px 0;
+    }
+
+    .contents img {
+        max-width: 100%;
+    }
+
+    main > div:not(.top):not(.contents) p {
+        font-size: 0.85em;
+        margin: 8px 0;
+    }
+
+    #contact h1 {
+        font-size: 1.2em;
+        margin: 15px 0 10px 0;
+    }
+
+    form input,
+    form textarea {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    form button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #contact-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
  
