@@ -44,6 +44,9 @@ li{
     list-style: none;
 }
 
+h1{
+    color: #1e6bd6;
+}
 
 /* ========== Header ========== */
 .header{
@@ -277,73 +280,7 @@ li{
   max-width: 40%;
 }
 
-.news{
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto ;
-  padding: 20px 0;
-  z-index: 1;
-}
 
-.news::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  background: #f2f2f2;
-  z-index: -1;
-}
-
-
-.news-row{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-
-.news-title{
-  text-align: left;
-  margin-right: 40px;
-  flex: 0 0 auto;
-  min-width: 100px;
-}
-
-.news-title h2{
-  font-size: 2rem;
-  margin: 0;
-}
-
-.news-title h3{
-  font-size: 1rem;
-  margin: 0;
-  color: #1e6bd6;
-}
-
-.news-text{
-  flex: 1;
-  text-align: center;
-  min-width: 150px;
-}
-
-.news-btn{
-  padding: 6px 14px;
-  border: 2px solid #1e6bd6;
-  border-radius: 20px;
-  color: #1e6bd6;
-  text-decoration: none;
-  transition: 0.3s;
-  flex: 0 0 auto;
-}
-
-.news-btn:hover{
-  background: #1e6bd6;
-  color: #fff;
-}
 
 .text{
     font-size: 20px;
@@ -548,25 +485,7 @@ footer > p:last-child{
         left: 5%;
     }
 
-    .news-row{
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .news-title{
-        margin-right: 0;
-        width: 100%;
-    }
-
-    .news-text{
-        width: 100%;
-        text-align: left;
-    }
-
-    .news-btn{
-        width: 100%;
-        text-align: center;
-    }
 
     .text{
         font-size: 1rem;
@@ -623,14 +542,6 @@ footer > p:last-child{
         line-height: 1.6;
     }
 
-    .news-title h2{
-        font-size: 1.5rem;
-    }
-
-    .news-title h3{
-        font-size: 0.85rem;
-    }
-
     .text{
         font-size: 0.9rem;
     }
@@ -648,9 +559,7 @@ footer > p:last-child{
         font-size: 1.2rem;
     }
 
-    .news{
-        padding: 15px 0;
-    }
+
 
     .menu-item > a,
     .nav > li > a{
@@ -728,57 +637,7 @@ footer > p:last-child{
 }
 
 
-.news{
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto ;
-  padding: 0;
-  z-index: 1;
-}
 
-.news::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  background: #f2f2f2;
-  z-index: -1;
-}
-
-
-.news-row{
-  display: flex;
-  align-items: center;
-}
-
-
-.news-title{
-  text-align: left;
-  margin-right: 40px;
-}
-
-
-.news-text{
-  flex: 1;
-  text-align: center;
-}
-
-.news-btn{
-  padding: 6px 14px;
-  border: 2px solid #1e6bd6;
-  border-radius: 20px;
-  color: #1e6bd6;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.news-btn:hover{
-  background: #1e6bd6;
-  color: #fff;
-}
 
 .text{
     font-size: 20px;
@@ -829,4 +688,50 @@ footer{
 
 footer.wrapper{
     margin: 100px auto 0;
+}
+
+
+/* ========== Flow Section ========== */
+.flow {
+    background-color: #ADD8E6;
+    padding: 18px;
+    border-radius: 8px;
+    margin: 20px auto;
+    text-align: left;
+    position: relative;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.flow h3 {
+    color: #1e6bd6;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 0 0 8px 0;
+    font-size: 0.95rem;
+}
+
+.flow p {
+    margin: 4px 0;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+/* 縦線で繋ぐ */
+.flow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    width: 3px;
+    height: 25px;
+    background-color: #1e6bd6;
+    transform: translateX(-50%);
+}
+
+/* 最初の要素は縦線を表示しない */
+.flow:first-of-type::before {
+    display: none;
 }
