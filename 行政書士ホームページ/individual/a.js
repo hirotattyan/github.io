@@ -49,3 +49,29 @@ subMenus.forEach(submenu => {
         headerRight.classList.remove("active");
     });
 });
+
+const flowItems = document.querySelectorAll(
+  ".flow.inheritance, .flow.permission"
+);
+
+flowItems.forEach((item, index) => {
+  if (index % 2 === 0) {
+    item.classList.add("slide-left");
+  } else {
+    item.classList.add("slide-right");
+  }
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+flowItems.forEach((item) => {
+  observer.observe(item);
+});
