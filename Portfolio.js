@@ -58,5 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
     contactBtn.addEventListener("click", function() {
         document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     });
+
+    // その他セクションのアコーディオン
+    const otherToggle = document.getElementById("other-toggle");
+    const otherContent = document.getElementById("other-content");
+    otherToggle.addEventListener("click", function() {
+        otherToggle.classList.toggle("open");
+        otherContent.classList.toggle("open");
+    });
 });
 

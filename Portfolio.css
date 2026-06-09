@@ -143,6 +143,45 @@ header h2{
     margin-bottom: 10px;
  }
 
+ .other-section {
+    margin: 10px auto 10px;
+    max-width: 500px;
+ }
+
+ .other-toggle {
+    width: 100%;
+    background-color: #555555;
+    color: white;
+    border: 2px solid #333;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+ }
+
+ .other-toggle:hover {
+    background-color: #333333;
+ }
+
+ .other-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+ }
+
+ .other-toggle.open .other-arrow {
+    transform: rotate(180deg);
+ }
+
+ .other-content {
+    display: none;
+    padding-top: 10px;
+ }
+
+ .other-content.open {
+    display: block;
+ }
+
  #contact-btn {
     position: fixed;
     bottom: 20px;
