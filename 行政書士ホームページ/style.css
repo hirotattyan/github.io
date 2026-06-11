@@ -577,6 +577,7 @@ footer > p:last-child{
 
     .service-links{
         flex-direction: column;
+        align-items: center;
         gap: 30px;
         margin-top: 40px;
     }
