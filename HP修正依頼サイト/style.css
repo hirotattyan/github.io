@@ -244,6 +244,7 @@ main section h2{
 }
 
 .contact {
+    max-width: none;
     text-align: center;
     background-color: #eef4f6;
     padding-top: 48px;
