@@ -303,3 +303,25 @@ footer p {
   object-fit: contain;
   flex-shrink: 0;
 }
+
+.moving-message {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #168e8b;
+    font-weight: bold;
+}
+
+.moving-message span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: message-scroll 18s linear infinite;
+}
+
+@keyframes message-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
