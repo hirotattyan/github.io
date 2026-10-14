@@ -171,7 +171,7 @@ main section h2{
 
 .service ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   padding: 0;
   list-style: none;
@@ -324,4 +324,125 @@ footer p {
     to {
         transform: translateX(-100%);
     }
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.comparison > h2,
+.preview-switch {
+  grid-column: 1 / -1;
+}
+
+.comparison > h2 {
+  margin: 0 0 24px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.preview-switch {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.view-switch {
+  padding: 10px 24px;
+  color: #263445;
+  background: #fff;
+  border: 1px solid #16728a;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-switch.is-active {
+  color: #fff;
+  background: #16728a;
+}
+
+.comparison > section {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 24px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+.comparison > section h3 {
+  margin-top: 0;
+}
+
+.preview-window {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #cdd9d5;
+  background: #fff;
+}
+
+.preview-window iframe {
+  display: block;
+  flex: 0 0 auto;
+  border: 0;
+}
+
+.comparison.is-pc .preview-window {
+  height: 638px;
+}
+
+.comparison.is-pc .preview-window iframe {
+  width: 1400px;
+  height: 1450px;
+  transform: scale(0.44);
+  transform-origin: top center;
+}
+
+.comparison.is-mobile .preview-window {
+  height: 780px;
+}
+
+.comparison.is-mobile .preview-window iframe {
+  width: min(375px, 100%);
+  height: 780px;
+}
+
+.comparison > section > a {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .comparison {
+    grid-template-columns: 1fr;
+    padding: 48px 20px;
+  }
+
+  .comparison > section {
+    padding: 20px;
+  }
+
+  .comparison.is-pc .preview-window {
+    height: 319px;
+  }
+
+  .comparison.is-pc .preview-window iframe {
+    transform: scale(0.22);
+  }
+
+  .service ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparison > section > a,
+.comparison > section > a:visited {
+  color: #16728a;
 }

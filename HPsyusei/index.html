@@ -6,6 +6,7 @@
   <meta name="description" content="古くなったホームページを、スマートフォンでも見やすく整えます。表示崩れや文字・メニューの見づらさなど、既存ホームページのスマホ対応・リニューアルをご相談ください。">
 <title>ホームページのスマホ対応・リニューアル｜ひろたっちゃん</title>
 <link rel="stylesheet" href="style.css">
+<script src="view-switch.js" defer></script>
 </head>
 <body>
   <header>
@@ -63,18 +64,32 @@
 
     <div class="comparison" id="works">
       <h2>ビフォーアフター</h2>
-      <section>
-        <h3>修正前</h3>
-        <iframe src="" title=""></iframe>
-        <a href="" target="_blank" rel="noopener">別タブで開く</a>
-      </section>
 
-      <section>
-        <h3>修正後</h3>
-        <iframe src="" title=""></iframe>
-        <a href="" target="_blank" rel="noopener">別タブで開く</a>
-      </section>
+    <div class="preview-switch" role="group" aria-label="表示サイズ">
+      <button type="button" class="view-switch is-active" data-mode="pc">
+        PC表示
+      </button>
+      <button type="button" class="view-switch" data-mode="mobile">
+        スマホ表示
+      </button>
     </div>
+
+    <section class="preview-card">
+      <h3>修正前</h3>
+      <div class="preview-window">
+        <iframe src="before/index.html" title="修正前のホームページ"></iframe>
+    </div>
+      <a href="before/index.html" target="_blank" rel="noopener">別タブで開く</a>
+  </section>
+
+  <section class="preview-card">
+    <h3>修正後</h3>
+    <div class="preview-window">
+      <iframe src="after/index.html" title="修正後のホームページ"></iframe>
+    </div>
+    <a href="after/index.html" target="_blank" rel="noopener">別タブで開く</a>
+  </section>
+</div>
 
 
     <section class="flow" id="flow">

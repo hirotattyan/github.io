@@ -1,15 +1,27 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
 body {
-    margin: 8px;
-    color: #111;
-    background-color: #fff;
-    font-family: "MS Ｐゴシック", sans-serif;
+    margin: 0;
+    color: #263238;
+    background-color: #f4f6f5;
+    font-family: "Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .page-wrapper {
-    width: 1400px;
-    margin-left: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #fff;
 }
 
 header {
@@ -23,19 +35,25 @@ header p {
 header h1 {
     margin: 8px 0;
     font-size: 36px;
+    width: 100%;
+    max-width: 620px;
+    padding: 2px 10px;
+    color: #fff;
+    font-weight: normal;
+    background-color: #244a42;
 }
+
+
 
 .content-layout {
-    display: flex;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px,1fr);
+    gap: 32px;
 }
 
-.main-column {
-    width: 750px;
-}
-
+.main-column ,
 .side-column {
-    width: 626px;
+    min-width: 0;
 }
 
 .notice {
@@ -45,12 +63,16 @@ header h1 {
     background-color: #397d38;
 }
 
-.main-column h2 {
-    margin-top: 24px;
-    padding-bottom: 4px;
-    color: #0000cc;
+.main-column h2,
+.side-column h2 {
+    margin: 32px 0 16px;
+    padding: 10px 12px;
+    color: #244a42;
     font-size: 22px;
-    border-bottom: 1px solid #999;
+    line-height: 1.4;
+    background-color: #f5f8f7;
+    border-left: 5px solid #3c806d;
+    border-bottom: 1px solid #cdd9d5;
 }
 
 .side-banner {
@@ -71,15 +93,6 @@ header h1 {
     font-size: 26px;
 }
 
-.side-column h2 {
-    margin-top: 22px;
-    padding: 4px 8px;
-    color: #16733a;
-    font-size: 20px;
-    background-color: #f7f7f7;
-    border: 1px solid #888;
-}
-
 header p:first-child {
     color: #666;
 }
@@ -89,14 +102,6 @@ header p:nth-of-type(2) {
     letter-spacing: 0.5px;
 }
 
-header h1 {
-    width: 620px;
-    padding: 2px 10px;
-    color: #fff;
-    font-size: 36px;
-    font-weight: normal;
-    background-color: #9292ed;
-}
 
 footer {
     margin-top: 24px;
@@ -140,21 +145,34 @@ footer p {
 .animated-consult-button {
     display: inline-grid;
     place-items: center;
-    width: 170px;
-    height: 44px;
+    width: 100%;
+    max-width: 260px;
+    min-height: 56px;
     margin: 8px 0;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    background: linear-gradient(#69b8ff, #0879dd);
-    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #244a42;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 2px 4px #999;
+    box-shadow: 0 3px 8px rgba(36,74,66,0.2);
+    transition: background-color 0.2s ease,transform 0.2s ease;
 }
 
 .animated-consult-button span {
     grid-area: 1 / 1;
+}
+
+.animated-consult-button:hover{
+    background-color: #3c806d;
+    transform: translateY(-2px);
+}
+
+.animated-consult-button:focus-visible {
+    outline: 3px solid #8fc8b8;
+    outline-offset: 3px;
 }
 
 .label-first {
@@ -180,4 +198,35 @@ footer p {
     width: 100%;
     height: auto;
     margin: 12px 0 18px;
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    header h1{
+        font-size: clamp(20px,6vw,30px);
+    }
+
+    .header-contact{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.header-contact{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #244a42;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.header-contact:hover {
+    background-color: #3c806d;
 }
