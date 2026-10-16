@@ -370,3 +370,15 @@ header h2{
     }
 }
  
+/* お問い合わせページへの案内 */
+.portfolio-contact { margin: 40px auto 24px; padding: 40px 20px; max-width: 760px; color: #fff; background: #333; border: 1px solid #666; border-radius: 16px; box-sizing: border-box; }
+.portfolio-contact .contact-eyebrow { margin: 0 0 12px; color: #ccc; font-size: 12px; letter-spacing: .2em; }
+.portfolio-contact h2 { margin: 0 0 14px; padding: 0; }
+.portfolio-contact > p { line-height: 1.8; }
+.portfolio-contact-link { display: inline-flex; justify-content: center; align-items: center; gap: 24px; min-height: 52px; max-width: 100%; box-sizing: border-box; margin-top: 14px; padding: 14px 24px; border-radius: 8px; background: #fff; color: #222; font-weight: bold; text-decoration: none; transition: background .2s, transform .2s; }
+.portfolio-contact-link:hover { background: #e6e6e6; transform: translateY(-2px); }
+#contact-btn { display: inline-flex; align-items: center; gap: 12px; background: #222; color: #fff; border: 1px solid #666; text-decoration: none; z-index: 10; min-height: 44px; box-sizing: border-box; }
+#contact-btn:hover { background: #444; }
+.portfolio-contact-link:focus-visible, #contact-btn:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 6px #222; }
+@media (max-width: 600px) { .portfolio-contact { margin: 28px 16px 72px; padding: 28px 16px; } .portfolio-contact-link { width: 100%; gap: 12px; font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .portfolio-contact-link { transition: none; } .portfolio-contact-link:hover { transform: none; } }

@@ -446,3 +446,9 @@ footer p {
 .comparison > section > a:visited {
   color: #16728a;
 }
+/* サービスの配色に合わせたお問い合わせボタン */
+.service-contact-link { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 54px; max-width: 100%; margin-top: 20px; padding: 14px 28px; border: 1px solid #16728a; border-radius: 8px; background: #16728a; color: #fff; font-weight: bold; text-decoration: none; box-shadow: 0 4px 12px rgba(22,114,138,.16); transition: background .2s, transform .2s; }
+.service-contact-link:hover { background: #0d5365; border-color: #0d5365; color: #fff; transform: translateY(-2px); }
+.service-contact-link:focus-visible, .top-button:focus-visible { outline: 3px solid #16728a; outline-offset: 4px; }
+@media (max-width: 600px) { .service-contact-link { width: 100%; padding: 14px 16px; gap: 12px; font-size: 15px; } }
+@media (prefers-reduced-motion: reduce) { .service-contact-link { transition: none; } .service-contact-link:hover { transform: none; } }

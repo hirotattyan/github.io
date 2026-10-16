@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ひろたっちゃんへのホームページ制作・修正に関するお問い合わせはこちら。ご相談・お見積もりは無料です。">
+    <title>お問い合わせ | ひろたっちゃん</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="site-logo">
+                ひろたっちゃん
+            </a>
+
+            <nav class="header-nav" aria-label="メインナビゲーション">
+                <a href="../index.html">ポートフォリオ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-intro">
+            <div class="contact-container">
+                <h1>お問い合わせ</h1>
+
+                <p class="intro-lead">
+                    ホームページの新規制作・修正に関するご相談を承っております。
+                </p>
+
+                <p>
+                    「新しくホームページを作りたい」
+                    「スマートフォンでも見やすくしたい」
+                    「ホームページの一部を修正したい」など、
+                    お気軽にご相談ください。
+                </p>
+
+                <p>
+                    ご相談・お見積もりは無料です。
+                    お問い合わせいただいた時点で料金が発生することはありません。
+                </p>
+
+                <p>
+                    お問合せ内容を確認後、メールにてご連絡いたします。
+                    なお、ご連絡は原則としてメールで対応しております。
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="contact-container">
+                <h2>お問合せフォーム</h2>
+
+                <p class="form-description">
+                    以下の項目をご入力のうえ、送信してください。
+                    <span class="required">必須</span>の項目は必ずご入力ください。
+                </p>
+
+                <form id="contact-form"
+                      action="https://formsubmit.co/hirotatchan@gmail.com"
+                      method="POST">
+
+                    <input type="hidden" name="_subject" value="ポートフォリオへのお問い合わせ">
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_autoresponse" value="お問合せありがとうございます。内容を確認し、
+                    ご入力いただいたメールアドレスへ折り返しご連絡いたします。">
+
+                    <div class="form-group">
+                        <label for="name">
+                            お名前
+                            <span class="required">必須</span>
+                        </label>
+                        <input type="text" 
+                               name="お名前"
+                               id="name"
+                               autocomplete="name"
+                               required
+                               >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            メールアドレス
+                            <span class="required">必須</span>
+                        </label>
+                        <input type="email"
+                               name="email"
+                               id="email"
+                               autocomplete="email"
+                               required
+                               >
+                    </div>
+                    <label for="inquiry-type">
+                        ご相談の種類
+                        <span class="required">必須</span>
+                    </label>
+
+                    <select name="ご相談の種類" 
+                            id="inquiry-type"
+                            required
+                            >
+                            <option value="">選択してください</option>
+                            <option value="ホームページの新規制作" data-field-type="new-website">ホームページの新規制作</option>
+                            <option value="既存ホームページの修正・リニューアル" data-field-type="website-renewal">既存ホームページの修正・リニューアル</option>
+                            <option value="WordPressに関するご相談" data-field-type="wordpress">WordPressに関するご相談</option>
+                            <option value="その他のご相談" data-field-type="other">その他のご相談</option>
+                        </select>
+
+                <div class="form-group conditional-field" id="new-website-fields" hidden>
+                    <label for="website-purpose">
+                        ホームページの制作目的
+                        <span class="optional">任意</span>
+                    </label>
+                    <select id="website-purpose" name="ホームページの制作目的" disabled>
+                        <option value="">選択してください</option>
+                        <option value="事業・サービスの紹介">事業・サービスの紹介</option>
+                        <option value="ポートフォリオ・実績紹介">ポートフォリオ・実績紹介</option>
+                        <option value="個人・趣味のホームページ">個人・趣味のホームページ</option>
+                        <option value="その他">その他</option>
+                    </select>
+
+                    <label for="page-count">
+                        希望するページ数
+                        <span class="optional">任意</span>
+                    </label>
+
+                    <select id="page-count" name="希望するページ数" disabled>
+                        <option value="">未定・相談したい</option>
+                        <option value="1ページ">1ページ</option>
+                        <option value="２〜５ページ">２〜５ページ</option>
+                        <option value="6ページ">6ページ</option>
+                    </select>
+                </div>
+                <div class="form-group conditional-field" 
+                id="website-renewal-fields" hidden>
+
+                    <label for="renewal-url">
+                        現在のホームページURL
+                        <span class="optional">任意</span>
+                    </label>
+
+                    <input type="url"
+                           id="renewal-url"
+                            name="現在のホームページURL"
+                            placeholder="https://example.com"
+                            disabled
+                       >
+
+                        <p class="form-help">
+                            修正・リニューアルを希望するホームページのURLをご入力ください。
+                        </p>
+
+                        <label for="renewal-type">
+                            ご希望の修正内容
+                            <span class="optional">任意</span>
+                        </label>
+
+                        <select id="renewal-type" name="ご希望の修正内容" disabled>
+                            <option value="">選択してください</option>
+                            <option value="スマートフォン対応">スマートフォン対応</option>
+                            <option value="デザイン・レイアウトの変更">デザイン・レイアウトの変更</option>
+                            <option value="文章・画像などの修正">文章・画像などの修正</option>
+                            <option value="ホームページ全体のリニューアル">ホームページ全体のリニューアル</option>
+                            <option value="その他">その他</option>
+                       </select>
+                    </div>  
+                    <div class="form-group conditional-field" id="wordpress-fields" hidden>
+                        <label for="wordpress-url">
+                            現在のサイトURL
+                            <span class="optional">任意</span>
+                        </label>
+
+                        <input type="url"
+                               id="wordpress-url"
+                               name="現在のサイトURL"
+                               placeholder="https://example.com"
+                               disabled
+                               >
+
+                               <label for="wordpress-task">
+                                ご希望の作業
+                                <span class="optional">任意</span>
+                               </label>
+                               
+                               <select id="wordpress-task" name="ご希望の作業" disabled>
+                                <option value="">選択してください</option>
+                                <option value="WordPressの新規導入">WordPressの新規導入</option>
+                                <option value="デザイン・レイアウトの変更">デザイン・レイアウトの変更</option>
+                                <option value="文章・画像などの更新">文章・画像などの更新</option>
+                                <option value="不具合の修正">不具合の修正</option>
+                                <option value="その他・相談したい">その他・相談したい</option>
+                               </select>
+                               
+                    </div>
+                                <div class="form-group">
+                                    <label for="message">
+                                        お問い合わせ内容
+                                        <span class="required">必須</span>
+                                    </label>
+
+                                    <textarea
+                                        id="message"
+                                        name="お問い合わせ内容"
+                                        rows="8"
+                                        placeholder="ご相談内容やご希望を、分かる範囲でご記入ください。"
+                                        required
+                                    ></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">
+                            お問い合わせを送信
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
