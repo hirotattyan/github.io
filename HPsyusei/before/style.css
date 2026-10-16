@@ -181,3 +181,8 @@ footer p {
     height: auto;
     margin: 12px 0 18px;
 }
+/* 履歴を使わずサービスページへ戻るリンク */
+.sample-return { width: 100%; box-sizing: border-box; padding: 12px 16px; margin: 0 0 16px; background: #eef4f6; border-bottom: 1px solid #dce3e8; font-family: sans-serif; text-align: left; }
+.sample-return a { display: inline-block; padding: 8px 0; color: #125c70; font-size: 14px; font-weight: bold; line-height: 1.6; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sample-return a:hover { color: #083b49; }
+.sample-return a:focus-visible { outline: 3px solid #16728a; outline-offset: 4px; }

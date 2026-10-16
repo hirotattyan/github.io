@@ -1,0 +1,232 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: #263238;
+    background-color: #f4f6f5;
+    font-family: "Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #fff;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+header p {
+    margin: 4px 0;
+}
+
+header h1 {
+    margin: 8px 0;
+    font-size: 36px;
+    width: 100%;
+    max-width: 620px;
+    padding: 2px 10px;
+    color: #fff;
+    font-weight: normal;
+    background-color: #244a42;
+}
+
+
+
+.content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px,1fr);
+    gap: 32px;
+}
+
+.main-column ,
+.side-column {
+    min-width: 0;
+}
+
+.notice {
+    display: inline-block;
+    padding: 2px 8px;
+    color: #fff;
+    background-color: #397d38;
+}
+
+.main-column h2,
+.side-column h2 {
+    margin: 32px 0 16px;
+    padding: 10px 12px;
+    color: #244a42;
+    font-size: 22px;
+    line-height: 1.4;
+    background-color: #f5f8f7;
+    border-left: 5px solid #3c806d;
+    border-bottom: 1px solid #cdd9d5;
+}
+
+.side-banner {
+    padding: 14px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #888;
+}
+
+.side-banner p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.side-banner strong {
+    display: block;
+    color: #222;
+    font-size: 26px;
+}
+
+header p:first-child {
+    color: #666;
+}
+
+header p:nth-of-type(2) {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+
+footer {
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+.consultation-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 14px 0;
+}
+
+
+.moving-message {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #168e8b;
+    font-weight: bold;
+}
+
+.moving-message span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: message-scroll 18s linear infinite;
+}
+
+@keyframes message-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.animated-consult-button {
+    display: inline-grid;
+    place-items: center;
+    width: 100%;
+    max-width: 260px;
+    min-height: 56px;
+    margin: 8px 0;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #244a42;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(36,74,66,0.2);
+    transition: background-color 0.2s ease,transform 0.2s ease;
+}
+
+.animated-consult-button span {
+    grid-area: 1 / 1;
+}
+
+.animated-consult-button:hover{
+    background-color: #3c806d;
+    transform: translateY(-2px);
+}
+
+.animated-consult-button:focus-visible {
+    outline: 3px solid #8fc8b8;
+    outline-offset: 3px;
+}
+
+.label-first {
+    animation: show-first 4s steps(1, end) infinite;
+}
+
+.label-second {
+    animation: show-second 4s steps(1, end) infinite;
+}
+
+@keyframes show-first {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+@keyframes show-second {
+    0%, 49% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+}
+
+.work-strip {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 12px 0 18px;
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    header h1{
+        font-size: clamp(20px,6vw,30px);
+    }
+
+    .header-contact{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.header-contact{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    color: #fff;
+    background-color: #244a42;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.header-contact:hover {
+    background-color: #3c806d;
+}

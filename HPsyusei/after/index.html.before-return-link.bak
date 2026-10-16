@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>みなと行政書士事務所</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <p>平成23年（西暦2011年）6月1日（水）です</p>
+            <p>Administrative Procedures Legal Specialist Office “MINATO”</p>
+            <h1>みなと行政書士事務所</h1>
+            <p>行政書士会会員 行政書士登録番号/第00000000号</p>
+            <a class="header-contact" href="#contact">ご相談・お問い合わせ</a>
+        </header>
+
+    <main class="content-layout">
+        <section class="main-column">
+         <p class="notice">平成２３年６月 事務所を開設しました</p>
+
+            <p>
+               行政書士は、暮らしや事業に関する書類作成と手続きをお手伝いする専門家です。
+                初めての方にも分かりやすくご案内いたします。
+            </p>
+
+            <h2>行政書士の主な業務</h2>
+
+            <p>
+             遺言書や契約書などの書類作成、各種許可申請、自動車の登録手続きなど、
+                幅広いご相談を承っております。
+            </p>
+
+            <img class="work-strip"
+                 src="images/gyomu.png"
+                  alt="書類作成や相談対応など、行政書士の業務風景">
+
+            <h2>お困りの時はご相談ください</h2>
+
+            <p>
+                手続きに進め方がわからない場合も、まずはお気軽にお問い合わせください。
+                ご相談内容を伺い、必要な手続きをご案内いたします。
+            </p>
+
+            <hr>
+
+            <h2 id="contact">ご相談・お問い合わせ</h2>
+
+            <p>
+                お困りのことがございましたら、お気軽にご相談ください。
+                ご質問への回答や業務の見積りも承っております。
+            </p>
+
+            <p>
+                <a class="animated-consult-button" href="mailto:info@example.com">
+                    <span class="label-first">メール相談</span>
+                    <span class="label-second">無料相談</span>
+                </a>
+            </p>
+
+            <h2>個人情報保護方針</h2>
+
+            <p>
+                当事務所は、ご相談の際にお預かりした個人情報を適切に管理し、
+                ご本人の同意なく第三者へ提供することはありません。
+            </p>
+        </section>
+
+        <aside class="side-column">
+            <div class="moving-message">
+                <span>地域の皆様のご相談に丁寧に対応いたします</span>
+            </div>
+            <div class="side-banner">
+
+                <img class="consultation-image"
+                     src="images/soudan.png"
+                     alt="書類を見ながら相談する様子">
+                     
+                <p>あなたのそばの行政書士</p>
+                <strong>みなと行政書士事務所</strong>
+            </div>
+
+            <h2>事務所のご案内</h2>
+
+            <p>受付時間：平日9:00~17:00</p>
+            <p>休業日：日曜・祝日</p>
+            <p>所在地：鹿児島県南浜市中央１丁目</p>
+
+            <h2>お問い合わせ</h2>
+
+            <p>ご相談・お見積もりは無料です。</p>
+            <p>電話：099-000-0000</p>
+            <p>メール：info@example.com</p>
+
+            <hr>
+
+            <h2>行政書士紹介</h2>
+
+            <p><strong>行政書士 山田 太郎</strong></p>
+
+            <p>
+                地域の皆様に安心してご相談いただけるよう、
+                一つひとつのご相談に丁寧に対応いたします。
+            </p>
+
+            <h2>ご注意</h2>
+            <p>
+                このサイトに掲載している情報は、一般的な内容をご案内するものです。
+                個別の手続きや法律上の判断については、内容を確認した上でご案内いたします。
+            </p>
+        </aside>
+    </main>
+    <footer>
+    <hr>
+    <p>Copyright (C) 2011 みなと行政書士事務所 All Rights Reserved.</p>
+    <p>Administrative Procedures Legal Specialist Office “MINATO”</p>
+    <p><a href="#">ページトップへ</a></p>
+</footer>
+    </div>
+</body>
+</html>
