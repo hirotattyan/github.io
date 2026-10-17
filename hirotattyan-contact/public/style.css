@@ -202,7 +202,7 @@ body{
 }
 
 .business-info h2 {
-    margin: 0 0 24px;
+    margin: 0 0 6px;
     font-size: 24px;
 }
 
@@ -211,16 +211,99 @@ body{
 }
 
 .business-info dt {
-    margin-top: 16px;
+    margin-top: 1px;
     font-weight: bold;
 }
 
 .business-info dd {
-    margin: 4px 0 0;
+    margin: 2px 0 0;
     overflow-wrap: anywhere;
 }
 
 .business-info a {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* 特定商取引法に基づく表記 */
+.legal-info {
+    padding: 40px 0;
+}
+
+.legal-info h1 {
+    margin: 0 0 32px;
+    font-size: 28px;
+}
+
+.legal-info dl {
+    margin: 0;
+}
+
+.legal-info dt {
+    margin-top: 24px;
+    font-weight: bold;
+}
+
+.legal-info dd {
+    margin: 8px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.legal-info a {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* プライバシーポリシー */
+.privacy-policy {
+    padding: 40px 0;
+    overflow-wrap: anywhere;
+}
+
+.privacy-policy h1 {
+    margin: 0 0 32px;
+    font-size: 28px;
+}
+
+.privacy-policy h2 {
+    margin: 32px 0 12px;
+    font-size: 22px;
+}
+
+.privacy-policy p {
+    margin: 0 0 16px;
+}
+
+.privacy-policy ul {
+    margin: 0 0 16px;
+    padding-left: 24px;
+}
+
+.privacy-policy li + li {
+    margin-top: 8px;
+}
+
+.privacy-policy a {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* フッター */
+.site-footer {
+    padding: 24px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a {
     color: #1d4ed8;
     text-decoration: underline;
 }
