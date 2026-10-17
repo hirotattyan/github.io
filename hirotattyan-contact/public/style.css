@@ -195,3 +195,32 @@ body{
     .site-logo { gap: 8px; font-size: 18px; }
     .site-logo img { width: 120px; height: 68px; }
 }
+
+.business-info{
+    padding: 40px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.business-info h2 {
+    margin: 0 0 24px;
+    font-size: 24px;
+}
+
+.business-info dl {
+    margin: 0 0 24px;
+}
+
+.business-info dt {
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.business-info dd {
+    margin: 4px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.business-info a {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
