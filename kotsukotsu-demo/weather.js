@@ -1,0 +1,13 @@
+/* Original SVG weather illustrations; the badge only displays simulation weather. */
+(function(root){
+'use strict';
+const sun='<circle cx="32" cy="30" r="11" fill="#edbf60" stroke="#b88336"/><path d="M32 12v-4m0 48v-4M14 30h-4m44 0h-4M19 17l-3-3m32 32-3-3M19 43l-3 3m32-32-3 3" fill="none" stroke="#c79a4c"/>';
+const cloud='<path d="M16 35c-7-1-7-12 0-14 1-8 13-11 18-4 8-4 17 2 16 10 7 5 3 13-4 13H19c-4 0-6-2-6-5" fill="#b9d1d5" stroke="#6b909b"/>';
+const rain=cloud+'<path d="m22 45-3 6m15-6-3 6m15-6-3 6" fill="none" stroke="#638dba" stroke-width="3.5"/>';
+const heat='<circle cx="28" cy="28" r="11" fill="#e5a45a" stroke="#ba6946"/><path d="M28 12V8M12 28H8m9-11-3-3m14 30v4m-11-9-3 3m27-28-3 3" fill="none" stroke="#ca774e"/><path d="M45 24a4 4 0 0 1 8 0v18a8 8 0 1 1-8 0Z" fill="#fff0d1" stroke="#b16d56"/><path d="M49 30v17" stroke="#c76f51" stroke-width="3.5"/><circle cx="49" cy="49" r="4" fill="#c76f51"/>';
+const snow='<circle cx="32" cy="42" r="13" fill="#eef4ee" stroke="#92b3c0"/><circle cx="32" cy="23" r="9" fill="#fbfcf5" stroke="#92b3c0"/><path d="m19 39-7-6m33 6 7-6" fill="none" stroke="#a58a68"/><path d="M22 31h19v5H22zM36 34h5v10h-5z" fill="#648e9e" stroke="none"/><circle cx="29" cy="22" r="1.3" fill="#506967" stroke="none"/><circle cx="35" cy="22" r="1.3" fill="#506967" stroke="none"/><path d="m32 24 7 2-7 2" fill="#d89b55" stroke="none"/><circle cx="32" cy="40" r="1.5" fill="#738b88" stroke="none"/><circle cx="32" cy="47" r="1.5" fill="#738b88" stroke="none"/><path d="M24 17h16M27 16v-6h10v6" fill="#6d8788" stroke="#6d8788"/><path d="M13 17v6m-3-3h6m35-4v6m-3-3h6" fill="none" stroke="#a3c2cf" stroke-width="1.5"/>';
+const storm='<path d="M20 22c15-14 34 5 21 16-8 7-21 0-16-9 3-6 12-2 9 3M15 31c-3 14 11 25 24 17M47 20c7 7 9 17 3 25" fill="none" stroke="#6f8f9b" stroke-width="4"/><path d="m18 47-3 5m31-1-2 4" stroke="#638dba"/>';
+const pictures={sunny:{label:'晴天',art:sun+'<path d="m13 51 3-2 3 2m26-36 3-2 3 2" stroke="#6f9f88"/><path d="M49 44v8m-4-4h8" stroke="#e0b75d"/>'},clear:{label:'穏やか',art:cloud},rain:{label:'長雨',art:rain},heat:{label:'猛暑',art:heat},snow:{label:'大雪',art:snow},flood:{label:'大雨・浸水',art:rain},typhoon:{label:'台風',art:storm}};
+function badge(type){const item=pictures[type]||pictures.clear;return {label:item.label,html:'<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="32" cy="32" r="30" fill="#fffdf4" stroke="#8d9c88" stroke-width="1.5"/>'+item.art+'</svg><span>'+item.label+'</span>'};}
+root.KWeatherBadge={badge};if(typeof module!=='undefined')module.exports=root.KWeatherBadge;
+})(typeof globalThis!=='undefined'?globalThis:this);

@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "こつこつ商店街 体験版",
+  "short_name": "商店街体験版",
+  "description": "一か月ずつ、わたしたちの街を育てる。商店街の建設・経営シミュレーション。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f0e4",
+  "theme_color": "#f4f0e4",
+  "icons": [
+    {
+      "src": "assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

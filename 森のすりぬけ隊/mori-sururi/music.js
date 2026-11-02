@@ -1,0 +1,17 @@
+/* Original forest-walk instrumental, synthesized locally; no external audio. */
+class ForestMusic{
+ constructor(){this.context=null;this.enabled=false;this.active=false;this.source=null;this.offset=0;this.volume=.35;}
+ init(){if(this.context)return;const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw new Error('Audio unavailable');this.context=new Audio();this.gain=this.context.createGain();this.gain.gain.value=this.volume*.65;this.gain.connect(this.context.destination);this.buffer=this.compose();}
+ compose(){const sr=this.context.sampleRate,beat=60/112,duration=64*beat,buffer=this.context.createBuffer(2,Math.ceil(sr*duration),sr),channels=[buffer.getChannelData(0),buffer.getChannelData(1)];
+ const note=(midi,at,length,amp,kind='wood',pan=0)=>{const freq=440*2**((midi-69)/12);for(let i=0,n=Math.ceil(length*sr);i<n;i++){const t=i/sr,release=Math.min(1,(length-t)/.04);let sample;if(kind==='wood'){const envelope=Math.min(1,t/.003)*Math.exp(-t*10)*release;sample=(Math.sin(2*Math.PI*freq*t)+.2*Math.exp(-t*8)*Math.sin(2*Math.PI*freq*3.93*t))*envelope;}else if(kind==='flute'){const envelope=Math.min(1,t/.06)*Math.exp(-t*1.7)*release;const vibrato=.001*Math.sin(2*Math.PI*4.5*t);sample=(Math.sin(2*Math.PI*freq*t+vibrato)+.08*Math.sin(4*Math.PI*freq*t))*envelope;}else{const envelope=Math.min(1,t/.008)*Math.exp(-t*5)*release;sample=(Math.sin(2*Math.PI*freq*t)+.12*Math.sin(4*Math.PI*freq*t))*envelope;}const index=(Math.floor(at*sr)+i)%buffer.length;channels[0][index]+=sample*amp*(1-pan*.3);channels[1][index]+=sample*amp*(1+pan*.3);}};
+ const chords=[[60,64,67],[57,60,64],[53,57,60],[55,59,62],[52,55,59],[57,60,64],[50,53,57],[55,59,62]];
+ const melody=[[76,79,0,76,72,0,74,76],[72,0,69,72,76,0,72,0],[77,76,0,72,69,72,0,77],[74,0,71,74,79,76,74,0],[71,74,76,0,79,76,74,71],[72,0,76,79,81,79,76,0],[77,0,74,72,69,72,74,0],[74,79,0,76,74,71,72,0]];
+ for(let bar=0;bar<16;bar++){const chord=chords[bar%8],start=bar*4*beat;note(chord[0]-12,start,beat*1.4,.12,'bass');note(chord[0]-5,start+2*beat,beat*1.4,.08,'bass');for(let i=0;i<8;i++){if(i%2===1)note(chord[(i>>1)%3]+12,start+i*beat/2,beat*.7,.065,'wood',i%4===1?-.6:.6);const m=melody[bar%8][i];if(m){const second=bar>=8;note(m+(second&&bar%2?-12:0),start+i*beat/2,beat*(second?.95:.75),second?.08:.1,second?'flute':'wood',.15);}}}
+ return buffer;}
+ async enable(value){this.enabled=value;if(!value){this.sync(false);return;}try{this.init();await this.context.resume();this.sync(this.active);}catch(e){this.enabled=false;this.sync(false);throw e;}}
+ sync(active){this.active=active;const playing=this.enabled&&active&&this.context?.state==='running';if(playing&&!this.source){const source=this.context.createBufferSource();source.buffer=this.buffer;source.loop=true;source.connect(this.gain);this.startedAt=this.context.currentTime;source.start(0,this.offset%this.buffer.duration);this.source=source;}else if(!playing&&this.source){this.offset=(this.offset+this.context.currentTime-this.startedAt)%this.buffer.duration;this.source.stop();this.source.disconnect();this.source=null;}}
+ restart(){this.sync(false);this.offset=0;}
+ resumeContext(){if(this.enabled&&this.context?.state==='suspended')this.context.resume().then(()=>this.sync(this.active)).catch(()=>{});}
+ setVolume(value){this.volume=Math.max(0,Math.min(1,value));if(this.gain)this.gain.gain.setTargetAtTime(this.volume*.65,this.context.currentTime,.04);}
+}
+if(typeof module!=='undefined')module.exports=ForestMusic;

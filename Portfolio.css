@@ -1,214 +1,491 @@
-body{
+body {
     margin: 0;
     padding: 0;
+    background-color: #f3f6fa;
+    color: #252525;
 }
 
-header{
-    background-color:silver;
+header {
+    background-color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 24px 20px;
     text-align: center;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #2d567c;
 }
 
-header img{
-      width: 100px;
-      height: 100px;
-      display: block;
-      float: left;
+header img {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-main{
-    background-color: #999999;
+main {
+    background-color: #f3f6fa;
     text-align: center;
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
 }
 
-main div{
-    color: white;
-}
 
-main h2{
+main h2 {
     padding-top: 10px;
     margin-top: 0;
 }
 
-.top{
-   display: flex;
-   align-items: flex-end;
-   border-bottom: 3px solid #000;
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #d5dfe9;
 }
 
-.profile{
+.profile {
     width: 90%;
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 3px solid #000;
-    border-top: none;
-    border-bottom: none;
-    background-color: #444444;
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 32px 24px;
+    background-color: #ffffff;
+    border: 1px solid #d5dfe9;
+    border-radius: 16px;
     box-sizing: border-box;
 }
 
-.profile img{
-   display: block;
-   margin: 0 auto;
-    width: 200px;
-    height:200px;
-    border-radius: 100px;
+.profile .profile-image {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .profile h1,
 .profile h2,
-.profile p{
+.profile p {
     margin-top: 0;
     text-align: center;
 }
 
-.skill{
-   width: 85%;
-   max-width: 520px;
-   margin: 0 auto;
-   padding: 15px;
-   text-align: center;
-   box-sizing: border-box;
-   align-self: center;
-}
 
-header h2{
+
+header h2 {
     margin-bottom: 0;
 }
 
 
- footer{
-    background-color: #C0C0C0;
- }
-
- .contents{
-    position: relative;
-    display: block;
+footer {
+    padding: 20px;
+    background-color: #2d567c;
+    color: #ffffff;
     text-align: center;
-    max-width: 500px;
-    margin: 0 auto 10px;
- }
+}
 
- .contents img{
-    width:100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.3s ease;
- }
-
- .contents .overlay{
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
- }
-
- .contents:hover img {
-    opacity: 0.7;
- }
-
- .contents:hover .overlay{
-    opacity: 1;
- }
-
- .fade-in{
-    opacity:0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out,transform 0.6s ease-out;
- }
-
- .fade-in.active{
-    opacity: 1;
-    transform: translateY(0);
- }
-
- li{
-    list-style: none;
-    margin-bottom: 10px;
- }
-
- .other-section {
+.other-section {
     margin: 10px auto 10px;
-    max-width: 500px;
- }
+    max-width: 1000px;
+}
 
- .other-toggle {
+.other-toggle {
     width: 100%;
-    background-color: #555555;
+    background-color: #2d567c;
     color: white;
-    border: 2px solid #333;
+    border: 2px solid #2d567c;
     padding: 12px 20px;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s ease;
- }
+}
 
- .other-toggle:hover {
-    background-color: #333333;
- }
+.other-toggle:hover {
+    background-color: #204260;
+}
 
- .other-arrow {
+.other-arrow {
     display: inline-block;
     transition: transform 0.3s ease;
- }
+}
 
- .other-toggle.open .other-arrow {
+.other-toggle.open .other-arrow {
     transform: rotate(180deg);
- }
+}
 
- .other-content {
+.other-content {
     display: none;
     padding-top: 10px;
- }
+}
 
- .other-content.open {
+.other-content.open {
     display: block;
- }
+}
 
- #contact-btn {
+#contact-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
- }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
- #contact-btn:hover {
-    background-color: #0056b3;
- }
 
+/* HP修正サービスの案内 */
+.repair-service {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #2d567c;
+    box-sizing: border-box;
+}
+
+.repair-label {
+    margin: 0 0 16px;
+    color: #2d567c;
+    font-weight: bold;
+}
+
+.repair-service h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #252525;
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.8;
+}
+
+.repair-link {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 16px;
+    padding: 16px 24px;
+    background-color: #2d567c;
+    color: #ffffff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.repair-link:hover {
+    background-color: #204260;
+}
+
+.repair-link:focus-visible {
+    outline: 3px solid #2d567c;
+    outline-offset: 4px;
+}
+
+.repair-service > p:not(.repair-label){
+    color: #252525;
+    line-height: 1.8;
+}
+.profile-members {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.profile-card {
+    min-width: 0;
+    padding: 24px;
+    background-color: #f3f6fa;
+    border-radius: 12px;
+}
+
+.profile-card h3 {
+    margin: 0 0 16px;
+    color: #2d567c;
+}
+
+.profile-card p {
+    color: #252525;
+    text-align: left;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* 制作実績のカード */
+.work-card {
+    width: 90%;
+    max-width: 760px;
+    margin: 32px auto;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid #D5DFE9;
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.work-image-link {
+    display: block;
+}
+
+.work-image-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.work-card .work-body {
+    padding: 24px;
+    color: #252525;
+}
+
+.work-category {
+    margin: 0 0 12px;
+    color: #2D567C;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.work-body h3 {
+    margin: 0 0 20px;
+    color: #252525;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.work-body p {
+    line-height: 1.8;
+}
+
+.work-tech {
+    color: #555555;
+    font-size: 14px;
+}
+
+a.work-link {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 12px;
+    padding: 12px 24px;
+    background-color: #2D567C;
+    color: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.work-link:hover {
+    background-color: #204260;
+}
+
+.work-image-link:focus-visible,
+a.work-link:focus-visible {
+    outline: 3px solid #2D567C;
+    outline-offset: -3px;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    margin-top: 24px;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 12px 8px;
+    color: #2d567c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.site-nav a:focus-visible {
+    outline: 3px solid #2d567c;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+#works-title,
+#profile-title,
+#contact {
+    scroll-margin-top: 24px;
+}
+
+.works {
+    padding: 48px 0;
+}
+
+.works > h2 {
+    margin: 0 0 32px;
+    padding: 0 16px;
+    color: #252525;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.skill {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    padding: 32px 24px;
+    background-color: #ffffff;
+    color: #252525;
+    border: 1px solid #d5dfe9;
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ゲーム紹介 */
+.games {
+    padding: 48px 20px;
+    background-color: #E6EEF6;
+}
+
+.games > h2 {
+    margin: 0 0 16px;
+    padding: 0;
+    color: #252525;
+    font-size: 28px;
+}
+
+.games-intro {
+    margin: 0 auto 32px;
+    max-width: 760px;
+    line-height: 1.8;
+}
+
+/* 注目作品：こつこつ商店街 */
+.featured-game {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding: 32px;
+    background-color: #FFFFFF;
+    border: 2px solid #2D567C;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.featured-game-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.featured-game-body {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.featured-game-badge {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 6px 14px;
+    background-color: #2D567C;
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.featured-game-body h3 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.featured-game-body > p {
+    line-height: 1.8;
+}
+
+.featured-game-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.featured-game-buy {
+    display: inline-block;
+    max-width: 100%;
+    padding: 16px 24px;
+    background-color: #2D567C;
+    color: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.featured-game-buy:hover {
+    background-color: #204260;
+}
+
+.featured-game-demo {
+    display: inline-block;
+    padding: 8px 0;
+    color: #2D567C;
+    text-underline-offset: 4px;
+}
+
+.featured-game-buy:focus-visible,
+.featured-game-demo:focus-visible {
+    outline: 3px solid #2D567C;
+    outline-offset: 4px;
+}
+
+.featured-game-note {
+    margin: 16px 0 0;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* 通常のゲーム一覧 */
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-list .game-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.game-card .work-image-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 2 / 1;
+    padding: 16px;
+    background-color: #101820;
+    box-sizing: border-box;
+}
+
+.game-card .work-image-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 /* レスポンシブ対応 */
 
 /* タブレット・スマートフォン（900px以下） */
 @media (max-width: 900px) {
-    header img {
-        float: none;
-        display: block;
-        margin: 10px auto;
-    }
 
     header h1 {
         margin: 10px 0 5px 0;
@@ -236,61 +513,13 @@ header h2{
         height: 150px;
     }
 
-    .skill {
-        width: 90%;
-        max-width: 100%;
-        padding: 15px;
-        margin-top: 20px;
-    }
+
 
     main h2 {
         font-size: 1.3em;
         padding: 15px 10px;
     }
 
-    .contents {
-        max-width: 100%;
-        margin: 0 auto 10px;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    .contents .overlay {
-        font-size: 1.2em;
-    }
-
-    main > div:not(.top):not(.contents) {
-        padding: 0 10px;
-        margin: 0 auto 20px;
-    }
-
-    form {
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    form p {
-        margin: 10px 0;
-    }
-
-    form input,
-    form textarea,
-    form button {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-
-    form label {
-        display: block;
-        margin-bottom: 5px;
-        text-align: left;
-    }
-
-    form button {
-        padding: 10px;
-        margin-top: 10px;
-    }
 
     #contact-btn {
         bottom: 15px;
@@ -298,6 +527,21 @@ header h2{
         padding: 8px 12px;
         font-size: 14px;
     }
+
+    .featured-game {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px;
+    }
+
+    .featured-game-image {
+    max-width: 480px;
+    margin: 0 auto;
+    }
+
+    .game-list {
+    grid-template-columns: 1fr;
+}
 }
 
 /* スマートフォン専用（600px以下） */
@@ -307,8 +551,7 @@ header h2{
     }
 
     header img {
-        width: 80px;
-        height: 80px;
+        width: 180px;
     }
 
     header h1 {
@@ -337,29 +580,22 @@ header h2{
         margin: 8px 0;
     }
 
-    .contents img {
-        max-width: 100%;
-    }
-
-    main > div:not(.top):not(.contents) p {
-        font-size: 0.85em;
-        margin: 8px 0;
-    }
-
-    #contact h1 {
-        font-size: 1.2em;
-        margin: 15px 0 10px 0;
-    }
-
-    form input,
-    form textarea {
-        padding: 8px;
+    .work-body p {
         font-size: 16px;
+        margin: 12px 0;
     }
 
-    form button {
-        padding: 10px;
+    .work-body .work-category,
+    .work-body .work-tech {
         font-size: 14px;
+    }
+
+    .work-card .work-body {
+        padding: 20px;
+    }
+
+    .profile-card{
+        padding: 20px;
     }
 
     #contact-btn {
@@ -368,17 +604,108 @@ header h2{
         padding: 7px 10px;
         font-size: 12px;
     }
+
+    .profile-members {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 }
- 
+
 /* お問い合わせページへの案内 */
-.portfolio-contact { margin: 40px auto 24px; padding: 40px 20px; max-width: 760px; color: #fff; background: #333; border: 1px solid #666; border-radius: 16px; box-sizing: border-box; }
-.portfolio-contact .contact-eyebrow { margin: 0 0 12px; color: #ccc; font-size: 12px; letter-spacing: .2em; }
-.portfolio-contact h2 { margin: 0 0 14px; padding: 0; }
-.portfolio-contact > p { line-height: 1.8; }
-.portfolio-contact-link { display: inline-flex; justify-content: center; align-items: center; gap: 24px; min-height: 52px; max-width: 100%; box-sizing: border-box; margin-top: 14px; padding: 14px 24px; border-radius: 8px; background: #fff; color: #222; font-weight: bold; text-decoration: none; transition: background .2s, transform .2s; }
-.portfolio-contact-link:hover { background: #e6e6e6; transform: translateY(-2px); }
-#contact-btn { display: inline-flex; align-items: center; gap: 12px; background: #222; color: #fff; border: 1px solid #666; text-decoration: none; z-index: 10; min-height: 44px; box-sizing: border-box; }
-#contact-btn:hover { background: #444; }
-.portfolio-contact-link:focus-visible, #contact-btn:focus-visible { outline: 3px solid #fff; outline-offset: 4px; box-shadow: 0 0 0 6px #222; }
-@media (max-width: 600px) { .portfolio-contact { margin: 28px 16px 72px; padding: 28px 16px; } .portfolio-contact-link { width: 100%; gap: 12px; font-size: 14px; } }
-@media (prefers-reduced-motion: reduce) { .portfolio-contact-link { transition: none; } .portfolio-contact-link:hover { transform: none; } }
+.portfolio-contact {
+    margin: 40px auto 24px;
+    padding: 40px 20px;
+    max-width: 760px;
+    color: #252525;
+    background: #ffffff;
+    border: 1px solid #d5dfe9;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.portfolio-contact .contact-eyebrow {
+    margin: 0 0 12px;
+    color: #2d567c;
+    font-size: 12px;
+    letter-spacing: .2em;
+}
+
+.portfolio-contact h2 {
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+.portfolio-contact>p {
+    line-height: 1.8;
+}
+
+.portfolio-contact-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    min-height: 52px;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 14px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #2d567c;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+}
+
+.portfolio-contact-link:hover {
+    background: #204260;
+    transform: translateY(-2px);
+}
+
+#contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #2d567c;
+    color: #ffffff;
+    border: 1px solid #2d567c;
+    text-decoration: none;
+    z-index: 10;
+    min-height: 44px;
+    box-sizing: border-box;
+}
+
+#contact-btn:hover {
+    background: #204260;
+}
+
+.portfolio-contact-link:focus-visible,
+#contact-btn:focus-visible {
+    outline: 3px solid #2d567c;
+    outline-offset: 4px;
+    box-shadow: none;
+}
+
+@media (max-width: 600px) {
+    .portfolio-contact {
+        margin: 28px 16px 72px;
+        padding: 28px 16px;
+    }
+
+    .portfolio-contact-link {
+        width: 100%;
+        gap: 12px;
+        font-size: 14px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-contact-link {
+        transition: none;
+    }
+
+    .portfolio-contact-link:hover {
+        transform: none;
+    }
+}

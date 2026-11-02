@@ -12,23 +12,521 @@
 </head>
   <body>
         <header>
-            <img src="image/logo.png">
+            <img src="image/logo.png"
+                 alt="ひろたっちゃんのロゴ"
+                 >
             <h1>ひろたっちゃん</h1>
             <h2>~個人事業主・小規模事業者向けに、シンプルで見やすいホームページを制作致します~</h2>
-            
+            <nav class="site-nav" aria-label="メインメニュー">
+                <a href="#works-title">制作実績</a>
+                <a href="#profile-title">プロフィール</a>
+                <a href="#contact">お問い合わせ</a>
+            </nav>
         </header>
 
 
         <main>
-            <div class="top">
-                <div class="profile">
-                    <img src="image/ひろたっちゃんアイコン(ひろ).jpg" alt="ひろたっちゃんのアイコン">
-                   <h2>ひろたっちゃんのプロフィール</h2>
-                    <p>ひろたっちゃんの制作担当です。調理師として働きながら、Web制作に取り組んでいます。</p>
-                    <p>2024年からProgate等でHTML/CSS/JavaScriptを学び、<br>ウェブ制作のスキルを習得しています。</p>
-                    <p>現在は、個人事業主や小規模事業者向けに、<br>シンプルで見やすいホームページの制作を提供しています。</p>
-                    <p>ご依頼いただいたお客様に喜んでいただけるようなサイトを<br>制作することを目標としています。</p>    
+
+            <section class="repair-service" aria-labelledby="repair-title">
+                <p class="repair-label">ホームページ修正のご相談</p>
+
+                <h2 id="repair-title">
+                    今のホームページを、スマホでも見やすく。
+                </h2>
+
+                <p>
+                    スマートフォンで見づらい、文字や画像が読みづらいなど、<br>
+                    お使いのホームページのお悩みをご相談ください。
+                </p>
+
+                <a class="repair-link" href="HPsyusei/index.html">
+                    HP修正サービスを見る
+                </a>
+            </section>
+            
+           <section class="works" aria-labelledby="works-title">
+                <h2 id="works-title">制作実績</h2>
+
+            <article class="work-card">
+            <a
+                class="work-image-link"
+                href="HPsyusei/index.html"
+            >
+                <img
+                    src="image/HPsyusei.png"
+                    alt="ホームページ修正サービスの紹介サイト"
+                    loading="lazy"
+                >
+            </a>
+
+            <div class="work-body">
+                <p class="work-category">自社サービス紹介サイト</p>
+
+                <h3>HP修正サービス</h3>
+
+                <p>
+                    <strong>制作目的：</strong>
+                    古いホームページをスマートフォンでも
+                    見やすくする修正サービスを紹介し、
+                    ご相談につなげるために制作しました。
+                </p>
+
+                <p>
+                    <strong>工夫した点：</strong>
+                    見本サイトの修正前と修正後を並べ、
+                    PC表示とスマートフォン表示を
+                    切り替えて比較できるようにしました。
+                    修正による違いを、実際の画面で確認できます。
+                </p>
+
+                <p class="work-tech">
+                    使用技術：HTML / CSS / JavaScript
+                </p>
+
+                <a class="work-link" href="HPsyusei/index.html">
+                    サイトを見る →
+                </a>
+            </div>
+        </article>
+
+            <article class="work-card">
+                    <a
+                        class="work-image-link" 
+                        href="life-support-kyoto/index.html"
+                        >
+                        <img
+                            src="image/life-support-kyoto.png" 
+                            alt="ライフサポート京都様のホームページ"
+                            loading="lazy"
+                            >
+                    </a>
+
+                <div class="work-body">
+                    <p class="work-category">ホームページ制作</p>
+                    
+                    <h3>ライフサポート京都様</h3>
+                        
+                    <p>
+                        <strong>制作目的:</strong>
+                         ご依頼者様から「名刺がわりの簡単なHPを作成して欲しい」
+                         との依頼を受け作成。
+                    </p>
+
+                    <p>
+                        <strong>工夫した点:</strong> 
+                        ご依頼者様から頂いた資料から情報を抜粋・集約し、
+                        見てわかりやすく配置。また、名刺から全体のカラーイメージや、
+                        ロゴを抜き出しサイトに反映させました。
+                    </p>
+
+                    <p class="work-tech">
+                        使用技術:HTML / CSS
+                    </p>
+
+                    <a 
+                        class="work-link"
+                        href="life-support-kyoto/index.html"
+                        >
+                        サイトを見る→
+                    </a>
                 </div>
+            </article>
+
+            <article class="work-card">
+                    <a class="work-image-link" href="sigyo/index.html">
+                        <img
+                            src="image/行政書士ホームページ.png" 
+                            alt="書士向けホームページの制作例"
+                            loading="lazy"
+                            >
+                    </a>
+
+                <div class="work-body">   
+                    <p class="work-category">ホームページ制作</p>
+                    
+                    <h3>書士向けホームページ</h3>
+
+
+                    <p>
+                        <strong>制作目的:</strong>
+                        書士職向けのウェブサイトを作成し、
+                        サービスの紹介とお問い合わせ機能を備えたサイトを制作すること。
+                    </p>
+
+                    <p>
+                        <strong>工夫した点:</strong>
+                        ユーザーの利便性を高めるために、
+                        簡単なお問い合わせフォームとFAQセクションを追加した。
+                    </p>
+
+                    <p class="work-tech">
+                        使用技術:HTML / CSS /JavaScript
+                    </p>
+
+                    <a class="work-link" href="sigyo/index.html">
+                        サイトを見る→
+                    </a>
+                </div>
+            </article>
+
+            <article class="work-card">
+                    <a
+                     class="work-image-link"
+                     href="サプリメントLP/サプリメント.html"
+                     >
+                        <img
+                            src="image/サプリメントLP.png"
+                            alt="サプリメントLPの画像"
+                            loading="lazy"
+                            >
+                    </a>        
+                    
+                <div class="work-body">   
+                    <p class="work-category">LP制作</p>
+                    
+                    <h3>サプリメント商品のLP</h3>
+
+                    <p>
+                        <strong>制作目的:</strong>
+                        サプリメント商品の魅力を伝える
+                        ランディングページを作成し、
+                        ユーザーの購買意欲を高めること。
+                    </p>
+
+                    <p>
+                        <strong>工夫した点:</strong>
+                         共感を呼ぶ悩み訴求、商品の特徴を明確に示すセクション分け、
+                         CTAボタンの配置でコンバージョンを意識。レスポンシブデザイン。
+                    </p>
+
+                    <p class="work-tech">
+                        使用技術:HTML /CSS /JavaScript
+                    </p>
+
+                    <a class="work-link" 
+                       href="サプリメントLP/サプリメント.html">
+                        サイトを見る→
+                    </a>
+                </div>
+            </article>
+
+               
+
+                
+              
+
+                <div class="other-section">
+                    <button
+                        type="button" 
+                        class="other-toggle" 
+                        id="other-toggle"
+                        aria-expanded="false"
+                        aria-controls="other-content"
+                        >
+                        その他 
+                        <span class="other-arrow" aria-hidden="true">▼</span>
+                    </button>
+
+                    <div class="other-content" id="other-content">
+                        
+                    <article class="work-card">
+                        <a
+                            class="work-image-link"
+                            href="リモコンサイト/index.html"
+                            >
+                            <img
+                                src="image/リモコンサイト.png"
+                                alt="中古リモコンショップひろたっちゃんの画像"
+                                loading="lazy"
+                                >
+                        </a>
+
+                        <div class="work-body">   
+                            <p class="work-category">ショップサイト制作</p>
+                            
+                            <h3>中古リモコンショップひろたっちゃん</h3>
+
+                            <p>
+                                <strong>制作目的:</strong>
+                                中古リモコンを販売するショップのウェブサイトを作成し、商品の検索と表示機能を備えたサイトを制作すること。
+                            </p>
+
+                            <p>
+                                <strong>工夫した点:</strong>
+                                商品データをJSONファイルから読み込み、
+                                検索機能を実装してユーザーが簡単に商品を探せるようにした。
+                            </p>
+
+                            <p class="work-tech">
+                                使用技術:HTML / CSS /JavaScript /JSON
+                            </p>
+
+                            <a class="work-link" href="リモコンサイト/index.html">
+                                サイトを見る→
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <a 
+                            class="work-image-link"
+                            href="ジャンジャンJAN/janjanjanmain.html"
+                        >
+                            <img src="image/ジャンジャンJAN.png" 
+                                      alt="ジャンジャンJANの画像" 
+                                      loading="lazy"
+                            >
+                        </a>
+
+                        <div class="work-body">
+                            <p class="work-category">業務支援ツール</p>
+
+                        <h3>バーコード検索サイト・ジャンジャンJAN</h3>
+
+                        <p>
+                            <strong>制作目的：</strong>
+                            発注作業員がJANコードで商品を素早く検索できるサイトを作成し、
+                            業務効率を向上させること。
+                        </p>
+
+                        <p>
+                            <strong>工夫した点：</strong>
+                             管理者用ページで商品データを管理し、JSON形式でエクスポートしてメインページで読み込む仕組みを実装。
+                             検索機能とカテゴリフィルタを追加。
+                        </p>
+
+                        <p class="work-tech">
+                            使用技術 : HTML / CSS / JavaScript / JSON
+                        </p>
+
+                        <a class="work-link"
+                           href="ジャンジャンJAN/janjanjanmain.html"
+                           >
+                           サイトを見る→
+                        </a>
+                      </div>
+                    </article>
+
+
+                        <article class="work-card">
+                            <a
+                                class="work-image-link"
+                                href="To-Doリストアプリ/To-Doリストアプリ.html"
+                            >
+                                <img 
+                                    src="image/To-Doリスト.png" 
+                                    alt="To-Doリストアプリの写真"
+                                    loading="lazy"
+                                    >
+                            </a>
+
+                        <div class="work-body">
+                            <p class="work-category">Webアプリ制作</p>
+
+                            <h3>To-Doリストアプリ</h3>
+                        
+                            <p>
+                                <strong>制作目的:</strong> 
+                                日常のタスク管理を助けるシンプルなTo-Doリストアプリを作成し、
+                                JavaScriptの基本的な操作を学ぶこと。
+                            </p>
+
+                            <p>
+                                <strong>工夫した点:</strong>
+                                ローカルストレージを使用することでデータを永続化し、
+                                ページリロード後もタスクが残るようにした。追加、削除機能を直感的に操作可能。
+                            </p>
+
+                            <p class="work-tech">
+                                使用技術 : HTML / CSS / JavaScript(localStorage)
+                            </p>
+
+                            <a
+                                class="work-link" 
+                                href="To-Doリストアプリ/To-Doリストアプリ.html"
+                            >
+                            アプリを見る→
+                            </a>
+                        </div>
+                        </article>
+
+                        
+                    </div>
+                </div>
+           </section>
+
+           <section class="games" aria-labelledby="games-title">
+    <h2 id="games-title">制作したゲーム</h2>
+
+    <p class="games-intro">
+        ブラウザで遊べるオリジナルゲームを制作しています。
+        気になるゲームを選んで、遊んでみてください。
+    </p>
+
+    <article class="featured-game">
+    <img
+        class="featured-game-image"
+        src="kotsukotsu-demo/assets/title-logo.webp"
+        alt="こつこつ商店街"
+        loading="lazy"
+    >
+
+    <div class="featured-game-body">
+        <p class="featured-game-badge">製品版販売中</p>
+
+        <h3>こつこつ商店街</h3>
+
+        <p>
+            お店を建て、一か月ずつ商店街を育てていく
+            建設・経営シミュレーションゲーム。
+            あなたの手で、にぎわいのある街をつくりませんか。
+        </p>
+
+        <div class="featured-game-links">
+            <a
+                class="featured-game-buy"
+                href="https://hirotattyan.booth.pm/items/9056858"
+            >
+                BOOTHで製品版を見る →
+            </a>
+
+            <a
+                class="featured-game-demo"
+                href="kotsukotsu-demo/index.html"
+            >
+                無料体験版で遊ぶ →
+            </a>
+        </div>
+
+        <p class="featured-game-note">
+            体験版では、マスコット誕生まで遊べます。
+        </p>
+    </div>
+</article>
+
+    <div class="game-list">
+
+    <article class="work-card game-card">
+    <a
+        class="work-image-link"
+        href="イロクミ/irokumi/index.html"
+    >
+        <img
+            src="image/irokumi.png"
+            alt="イロクミ"
+            loading="lazy"
+        >
+    </a>
+
+    <div class="work-body">
+        <p class="work-category">パズルゲーム</p>
+
+        <h3>イロクミ</h3>
+
+        <p>
+            ブロックを左右に交換し、
+            同じ色を3つ以上そろえて消すパズルゲーム。
+            連鎖をつなげてハイスコアを目指しましょう。
+        </p>
+
+        <a
+            class="work-link"
+            href="イロクミ/irokumi/index.html"
+        >
+            ゲームで遊ぶ →
+        </a>
+    </div>
+</article>
+
+<article class="work-card game-card">
+    <a
+        class="work-image-link"
+        href="森のすりぬけ隊/mori-sururi/index.html"
+    >
+        <img
+            src="森のすりぬけ隊/mori-sururi/assets/title-logo.png"
+            alt="森のすりぬけ隊"
+            loading="lazy"
+        >
+    </a>
+
+    <div class="work-body">
+        <p class="work-category">サバイバルゲーム</p>
+
+        <h3>森のすりぬけ隊</h3>
+
+        <p>
+            猪や虎を操作して、
+            岩や銃弾を避けながら生き残るゲーム。
+            木の実で体力を回復しながら、
+            ハイスコアを目指しましょう。
+        </p>
+
+        <a
+            class="work-link"
+            href="森のすりぬけ隊/mori-sururi/index.html"
+        >
+            ゲームで遊ぶ →
+        </a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+<div class="top">
+                <section class="profile" aria-labelledby="profile-title">
+                    <h2 id="profile-title">ひろたっちゃんのプロフィール</h2>
+                    
+                    <div class="profile-members">
+                        <article class="profile-card">
+                                <img 
+                                    src="image/TATU.JPG"
+                                    alt="兄・営業受付担当のプロフィール画像"
+                                    class="profile-image"
+                                    >
+
+                            <h3>兄・営業/受付担当</h3>
+
+                            <p>
+                                「ひろたっちゃん」の営業・受付を担当しています。
+                                ホームページの新規制作や修正について、
+                                ご相談を承ります。
+                            </p>
+                            <p>
+                                お客様のお困りごとやご希望を丁寧に伺い、
+                                制作担当の弟と連携しながら、ご相談から制作までをサポートします。
+                            </p>
+                        </article>
+
+                        <article class="profile-card">
+                            <img 
+                                src="image/ひろたっちゃんアイコン(ひろ).jpg"
+                                alt="ひろたっちゃんのアイコン"
+                                class="profile-image"
+                                >
+
+                            <h3>弟・制作担当</h3>
+                            
+                            <p> 
+                                ひろたっちゃんの制作担当です。調理師として働きながら、
+                                Web制作に取り組んでいます。
+                            </p>
+                            <p>
+                                2024年からProgate等でHTML/CSS/JavaScriptを学び、
+                                <br>ウェブ制作のスキルを習得しています。
+                            </p>
+                            <p>
+                                現在は、個人事業主や小規模事業者向けに、
+                                <br>シンプルで見やすいホームページの制作を提供しています。
+                            </p>
+                            <p>
+                                ご依頼いただいたお客様に喜んでいただけるようなサイトを
+                                <br>制作することを目標としています。
+                            </p>    
+                        </article>    
+                    </div>
+                </section>
                 <div class="skill">
                 <h2>現在できること</h2>
                     <p>ウェブ制作を通じて、<br>シンプルで使いやすいサイトをお届けします、<br>主なスキルとサービスは以下の通りです。</p>
@@ -38,141 +536,6 @@
                         <p>・簡単な動き（ボタン・メニュー）</p>
                 </div>
             </div>
-            <h2>☆MY Portfolio☆</h2>
-
-            <div class="contents fade-in">
-                    <a href="HPsyusei/index.html">
-                        <img src="image/HPsyusei.png" alt="HP修正サービス">
-                        <div class="overlay">HP修正サービス</div>
-                    </a>
-                </div>
-                <div>   
-                    <p>
-                        <a href="HPsyusei/index.html">HP修正サービス</a>
-                    </p>    
-                    <p><strong>制作目的:</strong>古いホームページをスマートフォンでも見やすくリニューアルするサービスを紹介し、修正の相談につなげることを目的に制作しました。<br>文章や画像だけでなく、見本サイトの修正前・修正後を実際の画面で比べられる構成にしています。 </p>
-                    <p><strong>工夫した点:</strong>修正前と修正後のサイトを並べて表示し、PC表示とスマートフォン表示を切り替えて確認できるようにしました。<br>どこが変わったのか、スマートフォンでどのように見やすくなったのかが伝わるよう、画面全体を見比べられる形にしています。</p>
-                    <p><strong>使用技術:</strong> HTML, CSS,JavaScript</p>
-                </div>
-
-            <div class="contents fade-in">
-                    <a href="life-support-kyoto/index.html">
-                        <img src="image/life-support-kyoto.png" alt="ライフサポート京都">
-                        <div class="overlay">ライフサポート京都様</div>
-                    </a>
-                </div>
-                <div>   
-                    <p>
-                        <a href="life-support-kyoto/index.html">ライフサポート京都様</a>
-                    </p>    
-                    <p><strong>制作目的:</strong> ご依頼者様から「名刺がわりの簡単なHPを作成して欲しい」との依頼を受け作成。</p>
-                    <p><strong>工夫した点:</strong> ご依頼者様から頂いた資料から情報を抜粋・集約し、見てわかりやすく配置。また、名刺から全体のカラーイメージや、ロゴを抜き出しサイトに反映させました</p>
-                    <p><strong>使用技術:</strong> HTML, CSS</p>
-                </div>
-    
-
-                <div class="contents fade-in">
-                    <a href="sigyo/index.html">
-                        <img src="image/行政書士ホームページ.png" alt="書士向けホームページの画像">
-                        <div class="overlay">書士向けホームページ</div>
-                    </a>
-                </div>
-                <div>   
-                    <p>
-                        <a href="sigyo/index.html">書士向けホームページ</a>
-                    </p>    
-                    <p><strong>制作目的:</strong> 書士職向けのウェブサイトを作成し、サービスの紹介とお問い合わせ機能を備えたサイトを制作すること。</p>
-                    <p><strong>工夫した点:</strong> ユーザーの利便性を高めるために、簡単なお問い合わせフォームとFAQセクションを追加した。</p>
-                    <p><strong>使用技術:</strong> HTML, CSS, JavaScript</p>
-                </div>
-
-                <div class="contents fade-in">
-                    <a href="サプリメントLP/サプリメント.html">
-                        <img src="image/サプリメントLP.png" alt="サプリメントLPの画像">
-                        <div class="overlay">サプリメント商品のLP</div>
-                    </a>
-                </div>
-                <div>   
-                    <p>
-                        <a href="サプリメントLP/サプリメント.html">サプリメント商品のLP</a>
-                    </p>    
-                    <p><strong>制作目的:</strong> サプリメント商品の魅力を伝えるランディングページを作成し、ユーザーの購買意欲を高めること。</p>
-                    <p><strong>工夫した点:</strong> 共感を呼ぶ悩み訴求、商品の特徴を明確に示すセクション分け、CTAボタンの配置でコンバージョンを意識。レスポンシブデザイン。</p>
-                    <p><strong>使用技術:</strong> HTML, CSS, JavaScript</p>
-                </div>
-
-               
-
-                
-              
-
-                <div class="other-section">
-                    <button class="other-toggle" id="other-toggle">その他 <span class="other-arrow">▼</span></button>
-                    <div class="other-content" id="other-content">
-                        
-                    <div class="contents fade-in">
-                        <a href="リモコンサイト/index.html">
-                            <img src="image/リモコンサイト.png" alt="リモコンサイトの画像">
-                            <div class="overlay">中古リモコンショップひろたっちゃん</div>
-                        </a>
-                    </div>
-                    <div>   
-                        <p>
-                            <a href="リモコンサイト/index.html">中古リモコンショップひろたっちゃん</a>
-                        </p>    
-                        <p><strong>制作目的:</strong> 中古リモコンを販売するショップのウェブサイトを作成し、商品の検索と表示機能を備えたサイトを制作すること。</p>
-                        <p><strong>工夫した点:</strong> 商品データをJSONファイルから読み込み、検索機能を実装してユーザーが簡単に商品を探せるようにした。</p>
-                        <p><strong>使用技術:</strong> HTML, CSS, JavaScript, JSON</p>
-                    </div>
-
-                    <div class="contents fade-in">
-                        <a href="ジャンジャンJAN/janjanjanmain.html">
-                            <img src="image/ジャンジャンJAN.png" alt="バーコードサイトの画像">
-                            <div class="overlay">バーコード検索サイト・ジャンジャンJAN</div>
-                        </a>
-                    </div>
-                    <div>   
-                        <p>
-                            <a href="ジャンジャンJAN/janjanjanmain.html">バーコード検索サイト・ジャンジャンJAN</a>
-                        </p>    
-                        <p><strong>制作目的:</strong> 発注作業員がJANコードで商品を素早く検索できるサイトを作成し、業務効率を向上させること。</p>
-                        <p><strong>工夫した点:</strong> 管理者用ページで商品データを管理し、JSON形式でエクスポートしてメインページで読み込む仕組みを実装。検索機能とカテゴリフィルタを追加。</p>
-                        <p><strong>使用技術:</strong> HTML, CSS, JavaScript, JSON</p>
-                    </div>
-
-                        <div class="contents fade-in">
-                            <a href="To-Doリストアプリ/To-Doリストアプリ.html">
-                                <img src="image/To-Doリスト.png" alt="To-Doリストアプリの写真">
-                                <div class="overlay">To-Doリストアプリ</div>
-                            </a>
-                        </div>
-                        <div>
-                            <p>
-                                <a href="To-Doリストアプリ/To-Doリストアプリ.html">To-Doリストアプリ</a>
-                            </p>
-                            <p><strong>制作目的:</strong> 日常のタスク管理を助けるシンプルなTo-Doリストアプリを作成し、JavaScriptの基本的な操作を学ぶこと。</p>
-                            <p><strong>工夫した点:</strong> ローカルストレージを使用することでデータを永続化し、ページリロード後もタスクが残るようにした。追加、削除機能を直感的に操作可能。</p>
-                            <p><strong>使用技術:</strong> HTML, CSS, JavaScript (localStorage)</p>
-                        </div>
-
-                        <div class="contents fade-in">
-                            <a href="タイピングゲーム/タイピングゲーム.html">
-                                <img src="image/タイピングゲーム.png" alt="タイピングゲームの画像">
-                                <div class="overlay">タイピングゲーム</div>
-                            </a>
-                        </div>
-                        <div>
-                            <p>
-                                <a href="タイピングゲーム/タイピングゲーム.html">タイピングゲーム</a>
-                            </p>
-                            <p><strong>制作目的:</strong> タイピングスキルを向上させるためのゲームを作成し、JavaScriptのイベント処理とタイマーを学ぶこと。</p>
-                            <p><strong>工夫した点:</strong> ランダムな単語を表示し、入力が正しいかチェック。スコアとタイマーを実装して競技性を加えた。リスタート機能で繰り返し遊べる。</p>
-                            <p><strong>使用技術:</strong> HTML, CSS, JavaScript</p>
-                        </div>
-                    </div>
-                </div>
-
-
 
 
             <section class="portfolio-contact" id="contact" aria-labelledby="contact-title">

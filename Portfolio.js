@@ -1,26 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const fadeElements = document.querySelectorAll(".fade-in");
-
-    const onScroll=()=>{
-        fadeElements.forEach(el =>{
-            const rect = el.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            if(rect.top<windowHeight-100){
-                el.classList.add("active");
-            }
-        });
-    };
-
-    window.addEventListener("scroll",onScroll);
-    onScroll();
-
-    // その他セクションのアコーディオン
+    document.addEventListener("DOMContentLoaded",function() {
     const otherToggle = document.getElementById("other-toggle");
     const otherContent = document.getElementById("other-content");
+
+    if (!otherToggle || !otherContent) {
+        return;
+    }
+    
     otherToggle.addEventListener("click", function() {
-        otherToggle.classList.toggle("open");
-        otherContent.classList.toggle("open");
+        const isOpen = otherContent.classList.toggle("open");
+    
+
+        otherToggle.classList.toggle("open", isOpen);
+        otherToggle.setAttribute("aria-expanded",String(isOpen));
     });
 });
-
