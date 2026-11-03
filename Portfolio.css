@@ -628,6 +628,12 @@ a.work-link:focus-visible {
     }
 }
 
+@media (max-width:400px) {
+    .repair-text{
+        font-size: 0.7em;
+    }
+}
+
 /* お問い合わせページへの案内 */
 .portfolio-contact {
     margin: 40px auto 24px;
