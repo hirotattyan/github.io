@@ -59,6 +59,12 @@ li{
     background: #fff;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .site-title{
   font-size: 1.4rem;
   margin: 0;
@@ -830,4 +836,9 @@ footer{
 
 footer.wrapper{
     margin: 100px auto 0;
+}
+
+.return-portfolio img{
+    width: 48px;
+    height: 48px;
 }

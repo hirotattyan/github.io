@@ -622,6 +622,10 @@ a.work-link:focus-visible {
         grid-template-columns: 1fr;
         gap: 24px;
     }
+
+    .repair-text {
+        font-size: 0.8em;
+    }
 }
 
 /* お問い合わせページへの案内 */
