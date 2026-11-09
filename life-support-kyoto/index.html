@@ -9,11 +9,10 @@
 </head>
 <body>
     <header>
-    <a class="return-portfolio" href="../index.html">ポートフォリオに戻る</a>
     <div class="header-inner">
         <h1>NPO法人ライフサポート京都</h1>
 
-        <nav>
+         <nav>
             <ul>
                 <li><a href="#about">法人紹介</a></li>
                 <li><a href="#activity">活動内容</a></li>
@@ -26,6 +25,11 @@
     
     <main>
         <section class="hero">
+            <div class="hero-background" aria-hidden="true">
+                <div class="hero-slide hero-slide-consultation"></div>
+                <div class="hero-slide hero-slide-music"></div>
+                <div class="hero-slide hero-slide-outing"></div>
+            </div>
             <div class="hero-inner">
 
                 <div class="hero-logo">
@@ -36,12 +40,15 @@
                     <p class="hero-subtitle">
                         福祉・医療・介護・暮らしの相談をサポート
                     </p>
-                
+                <p class="hero-slogan">
+                    世代を超えて交流、<br>
+                    孤立させない共生社会をめざす
+                </p>
 
                     <h2>NPO法人ライフサポート京都</h2>
 
                     <p class="hero-name">
-                        理事長 江浪 秀治
+                        共同代表 江浪 秀治
                         <span>行政書士／医療コーディネーター</span>
                     </p>
 
@@ -49,8 +56,14 @@
                         各分野の専門職と連携し、
                         市民生活のさまざまな問題の解決をめざしています。
                    </p>
+                   <button type="button" class="hero-pause" 
+                           aria-label="背景の切り替えを一時停止"
+                           aria-pressed="false">
+                    <span aria-hidden="true">Ⅱ</span>
+                   </button>
                 </div>   
             </div>
+            <p class="hero-image-note">※背景画像はイメージです</p>
         </section>
 
         <section id="about" class="about">
@@ -64,9 +77,10 @@
                 </p>
 
                 <p>
-                    現在は行政書士だけではなく、福祉・医療・介護・精神分野の専門職、
-                    議員、元刑事、弁護士、司法書士、税理士、僧侶、居住支援法人、
-                    調査事務所、他のNPO法人など、多方面と連携しています。
+                    令和6年からは、行政書士に加え、
+                    福祉・医療・介護・精神分野の専門職、議員、警察、
+                    弁護士、税理士、僧侶、居住支援法人など、
+                    多方面との連携を広げています。
                 </p>
 
                 <p>
@@ -98,21 +112,27 @@
                         <h3>福祉・介護</h3>
                         <p>
                             高齢者や介護家族など、福祉・介護に関する相談に対応します。
+                            ケアマネジャーや地域包括支援センター、
+                            社会福祉協議会など、支援に携わる方からの相談も受け付けています。
                         </p>
                     </div>
 
                     <div class="activity-item">
                         <h3>医療・精神分野</h3>
                         <p>
-                            医療や精神分野の専門職と連携し、必要な支援につなげます。
+                            看護師、精神保健福祉士、臨床心理士、
+                            精神科訪問看護などの専門職・支援機関と連携し、
+                            医療や心の健康に関する相談を必要な支援につなげます。
                         </p>
                     </div>
 
                     <div class="activity-item">
                         <h3>暮らし・法律</h3>
                         <p>
-                            相続、後見、見守り、不動産など、
+                            相続、後見、見守り、不動産、保証人など、
                             暮らしに関わる問題について専門職と連携します。
+                            入院時のお金の管理や、亡くなったあとの手続きをあらかじめ依頼する
+                            「死後事務委任」についての相談にも対応します。
                         </p>
                     </div>
 
@@ -147,7 +167,7 @@
 
                     <p>
                         深刻な事案で経済的な事情がある場合は、
-                        無料で継続対応できる場合もあります。
+                        無料で対応できる場合もあります。
                     </p>
 
                     <p>
@@ -213,22 +233,66 @@
                     相談対応だけでなく、地域での交流や
                     孤立を防ぐための活動にも取り組んでいます。
                 </p>
-
                 <div class="community-list">
 
                     <div class="community-item">
-                        <h3>地域交流会・相談会</h3>
+                        <h3>高齢者・介護家族の交流会</h3>
                         <p>
-                            高齢者世帯や介護家族、ひとり親家庭などを対象に、
-                            音楽イベントやお茶会、専門職による相談会などを行っています。
+                            高齢者世帯・介護家族を対象に、
+                            歌やお茶会を通じた交流、専門職による相談会を行っています。
                         </p>
+
+                        <p>
+                            懐かしい昭和歌謡や、フォークソングをみんなで歌うなど、
+                            気軽に交流できる場を作ります。
+                        </p>
+                        <p>
+                            下京区では「高齢者・介護家族交流会」を４回開催し、
+                            議員や弁護士、医療・福祉分野の専門職などが参加しました。
+                            右京区でも高齢者施設を拠点に、交流と相談支援の活動を広げています。
+                        </p>
+
                     </div>
 
                     <div class="community-item">
                         <h3>音楽ボランティア</h3>
                         <p>
-                            高齢者施設などで、音楽を通じた
-                            ボランティア活動を行っています。
+                            音楽療法士のウクレレ奏者がメンバーとして在籍し、
+                            高齢者施設などで音楽ボランティア活動を行っています。
+                        </p>
+                        <p>
+                            高齢者施設「デイサービス虹」では、
+                            昭和歌謡を参加者の皆様と一緒に歌う歌声ボランティアや、
+                            実際の相談事例をもとにした寸劇を実施しました。
+                        </p>
+                    </div>
+                    <div class="community-item">
+                        <h3>子どもと家族への支援</h3>
+                        <p>
+                            ひとり親家庭や、不登校・ひきこもり、いじめ・虐待などに悩む
+                            子どもとその家族を対象に、交流会を計画しています。
+                        </p>
+                        <p>
+                            ボール遊びや音楽、屋外での体験活動を通じた交流や、
+                            教員経験者などによる傾聴・相談支援も計画しています。
+                        </p>
+                        <p>
+                            学校内で解決に至らない深刻ないじめについても、
+                            被害を受けた子どもと家族に寄り添い、
+                            医師・行政書士・議員・警察などと連携して解決をめざします。
+                        </p>
+
+                    </div>
+                    <div class="community-item">
+                        <h3>交流会での相談支援</h3>
+                        <p>
+                            交流会での相談は無料です。
+                            医療・介護・福祉・法律など、
+                            各分野の専門職が連携して対応します。
+                        </p>
+                        <p>
+                            ご希望に応じて、交流会後の専門職による
+                            個別対応につなげることも可能です。
                         </p>
                     </div>
                 </div>
@@ -247,18 +311,50 @@
                     </div>
 
                     <div>
+                        <dt>共同代表</dt>
+                        <dd>
+                            福島（長岡京市議・元議長）<br>
+                            江浪 秀治（行政書士・医療コーディネーター）
+                        </dd>
+                    </div>
+
+                    <div>
                         <dt>理事長</dt>
-                        <dd>江浪 秀治</dd>
+                        <dd>池田 智子</dd>
+                    </div>
+
+                    <div>
+                        <dt>理事</dt>
+                        <dd>
+                            村田、建部、瀬崎、山本（行政書士）<br>
+                            板野（ケアマネ3事業所代表）
+                        </dd>
                     </div>
 
                     <div>
                         <dt>登記住所</dt>
                         <dd>〒612-0873 京都市伏見区深草瓦町1-42</dd>
+                        
                     </div>
 
                     <div>
                         <dt>事務所</dt>
-                        <dd>京都市伏見区深草北新町646-3 五信館ビル2F</dd>
+                        <dd>
+                            <p>京都市伏見区深草北新町646-3 五信館ビル2F</p>
+                            <div class="office-access">
+                                <figure class="office-photo">
+                                    <img src="images/五信館外観.png"
+                                         alt="事務所が入る五信館ビルの外観"
+                                        loading="lazy">
+                                        <figcaption>
+                                            五信館ビル外観<br>
+                                            事務所は2階です
+                                        </figcaption>
+                                </figure>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.5709165481361!2d135.76847204651844!3d34.94949827728482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010f58ce7b5539%3A0x7a4a82a0de876515!2z5ZCI5ZCM5Lya56S-IOeUn-a0u-OCteODneODvOODiOmWouilvw!5e0!3m2!1sja!2sjp!4v1793876287516!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            </div>
+                        </dd>
+                        
                     </div>
 
                     <div>
@@ -330,5 +426,6 @@
             <p>&copy;NPO法人ライフサポート京都</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

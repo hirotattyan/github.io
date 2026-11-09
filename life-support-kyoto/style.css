@@ -77,10 +77,96 @@ header nav a:hover {
     background-color: #fff8f0;
     color: #d97706;
 }
+
 .hero{
     background-color: #fff8f0;
     text-align: center;
     padding: 100px 0;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: #333;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+}
+
+.hero-slide-consultation {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+        url(images/相談風景.png);
+    opacity: 1;
+}
+
+.hero-slide-music {
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url(images/音楽交流風景.png);
+    animation: hero-fade 24s linear infinite;
+}
+
+.hero-slide-outing {
+    background-image: 
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url(images/02_外出同行.png);
+    animation: hero-outing 24s linear infinite;
+}
+
+@media (min-width: 769px) {
+    .hero-slide-outing {
+        background-position: center top;
+    }
+}
+
+@keyframes hero-fade {
+    0%,25% {
+        opacity: 0;
+    }
+
+    33%,67% {
+        opacity: 1;
+    }
+
+    75%,100% {
+        opacity: 0;
+    }
+    
+}
+
+@keyframes hero-outing {
+    0%,58% {
+        opacity: 0;
+    }
+
+    67%,92% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide-music,
+    .hero-slide-outing{
+        animation: none;
+    }
+
+    .hero .hero-pause {
+        display: none;
+    }
 }
 
 .hero-inner {
@@ -102,12 +188,20 @@ header nav a:hover {
 
 .hero-content {
     text-align: center;
+    color: #fff;
 }
 
 .hero-subtitle{
-    color: #d97706;
+    color: #fff;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+.hero-slogan {
+    font-size: clamp(22px,3vw,36px);
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 .hero h2{
@@ -124,13 +218,49 @@ header nav a:hover {
     display: block;
     font-size: 15px;
     margin-top: 5px;
-    color: #666;
+    color: #fff;
 }
 
 .hero-text{
     font-size: 17px;
 }
 
+.hero-pause {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    font: inherit;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.hero-pause:focus-visible{
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+.hero-image-note {
+    position: absolute;
+    left: 16px;
+    right: 76px;
+    bottom: 16px;
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
 .hero-button {
     display: inline-block;
     margin-top: 30px;
@@ -269,6 +399,10 @@ header nav a:hover {
     color: #555;
 }
 
+.community-item p + p {
+    margin-top: 15px;
+}
+
 .company{
     background-color: #f8f8f8;
 }
@@ -394,21 +528,24 @@ footer {
     }
 
     .hero {
-        padding: 60px 0;
+        padding: 40px 0 80px;
     }
 
     .hero-inner {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 20px;
     }
 
     .hero-logo img{
-        max-width: 180px;
+        max-width: 110px;
         margin: 0 auto;
     }
 
     .hero h2{
-        font-size: 30px;
+        font-size: clamp(20px,5vw,26px);
+        line-height: 1.5;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
     }
 
     .hero-text{
@@ -465,11 +602,87 @@ footer {
     }
 }
 
-.return-portfolio {
-    color: #0066cc;
-    text-decoration: underline;
+.activity-image {
+    max-width: 800px;
+    margin: 0 auto 35px;
 }
 
-.return-portfolio:hover {
-    color: #ff6600;
+.activity-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.activity-image figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.company-info dd {
+    min-width: 0;
+}
+
+.company-info iframe {
+    display: block;
+    width: 100%;
+    height: 280px;
+    margin: 15px 0 0;
+    border: 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .company-info iframe {
+        height: 240px;
+    }
+}
+
+.office-access {
+    display: grid;
+    grid-template-columns: 200px minmax(0,1fr);
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.office-photo {
+    margin: 0;
+}
+
+.office-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.office-photo figcaption {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+.office-access iframe {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .office-access {
+        grid-template-columns: 1fr;
+    }
+
+    .office-photo {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
 }
