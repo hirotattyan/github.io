@@ -686,3 +686,28 @@ iframe {
         margin: 0 auto;
     }
 }
+
+/* ポートフォリオへの案内 */
+.portfolio-return {
+    padding: 10px 5%;
+    background-color: #fff8f0;
+    border-bottom: 1px solid #ead9c5;
+}
+
+.portfolio-return a {
+    display: inline-block;
+    padding: 4px 0;
+    color: #78420d;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.portfolio-return a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.portfolio-return a:focus-visible {
+    outline: 2px solid #78420d;
+    outline-offset: 4px;
+}
